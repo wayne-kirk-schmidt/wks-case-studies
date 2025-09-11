@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Guru Suite Case Study Carousel
+  </title>
+<style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .carousel-slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #1e3c72;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      width: 20%;
+      background-color: #f0f3f9;
+      color: #1e3c72;
+    }
+    th span {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .carousel-nav button {
+      background-color: #1e3c72;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+<style>
+.starry-header .first-letter {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  color: #000 !important;
+  display: inline-block !important;
+  margin-right: 0.05em !important;
+}
+</style>
+</head>
+<body>
+<div class="carousel-container">
+<div class="carousel-slide active">
+<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td><p class="p2"><span class="s2">A <b>global financial institution</b> operated across dozens of sites with a mixed estate of Unix, Windows, and Cisco devices. Manual hardening and ad‑hoc changes created drift, audit gaps, and misconfiguration risk across the perimeter.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td><p class="p2"><span class="s2">Design a <b>programmatic security enforcement</b> system to standardize configuration, reduce drift, and provide auditable control across servers and network devices.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td><ul class="ul1">
+<li class="li3"><span class="s3"></span><span class="s4">Built <b>AEGIS</b> actions, settings, and methods to harden devices based on OS and device type.</span></li>
+<li class="li4">Created scripts using the methods to harden devices starting with standard device images.</li>
+<li class="li2"><span class="s5">Developed an</span><span class="s2"> enforcement toolkit with policy templates for Unix, Windows, and Cisco.</span></li>
+<li class="li2"><span class="s5"></span><span class="s2">Built <b>declarative baselines</b>, automated validation, and safe rollback to eliminate configuration drift.</span></li>
+<li class="li2"><span class="s5"></span><span class="s2">Exposed a <b>central CLI &amp; catalogs</b> for repeatable changes and pre‑deployment checks.</span></li>
+<li class="li2"><span class="s5"></span><span class="s2">Integrated with change control for <b>auditable, testable</b> perimeter changes at scale.</span></li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td><ul class="ul1">
+<li class="li2"><span class="s5"></span><span class="s2">Consistently delivered perimeters across <b>80+ sites</b>, effectively eliminating “operator error” issues.</span></li>
+<li class="li2"><span class="s5"></span><span class="s2">Compressed hardening &amp; remediation timelines from weeks to <b>hours</b> for common tasks.</span></li>
+<li class="li2"><span class="s5"></span><span class="s2">Improved audit readiness with <b>repeatable, verifiable</b> controls.</span></li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td><p class="p2"><span class="s2">Lowered operational risk from misconfiguration, reduced emergency change costs, and decreased audit findings through standardized, automated enforcement. Organized build and configuration operations for multiple perimeters responsible for Internet, Client, Market Data, Intranet, and Corporate functions.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td><p class="p2"><span class="s2">Established a sustainable, <b>code‑driven security</b> model that scaled with growth, turning perimeter changes into fast, safe, and auditable workflows.</span></p></td></tr></table>
+</div>
+<!-- Future slides go here -->
+<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
+<script>
+   let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>

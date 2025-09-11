@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Guru Suite Case Study Carousel
+  </title>
+<style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .carousel-slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #1e3c72;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      width: 20%;
+      background-color: #f0f3f9;
+      color: #1e3c72;
+    }
+    th span {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .carousel-nav button {
+      background-color: #1e3c72;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+<style>
+.starry-header .first-letter {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  color: #000 !important;
+  display: inline-block !important;
+  margin-right: 0.05em !important;
+}
+</style>
+</head>
+<body>
+<div class="carousel-container">
+<div class="carousel-slide active">
+<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A <strong>Top‑Tier Insurance Company</strong> struggled to manage its <strong>$69M</strong> technology fleet. Manual plant surveys took <strong>7–9 weeks</strong> and delivered inconsistent results (≈<strong>75%</strong> accuracy), delaying support and weakening compliance and license governance.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>Replace manual surveys with an automated, <strong>ML‑based “spidering” inventory engine</strong> that continuously discovers, validates, and reports on assets with high confidence at enterprise scale.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td><ul>
+<li>Designed a <strong>distributed discovery engine</strong> to automatically crawl infrastructure and endpoints.</li>
+<li>Applied <strong>machine learning</strong> to normalize asset signatures, remove duplicates, and flag anomalies.</li>
+<li>Integrated <strong>license and configuration</strong> collection into the same pipeline for unified compliance and support data.</li>
+<li>Delivered <strong>dashboards &amp; reports</strong> for IT, Finance, and Compliance to act on in near real‑time.</li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td><ul>
+<li>Cut survey cycle time from <strong>~8 weeks to 2 hours</strong>.</li>
+<li>Improved asset accuracy from <strong>~75% to 99.92%</strong>.</li>
+<li>Enabled proactive license tracking, compliance validation, and smoother support handoffs.</li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td><ul>
+<li>Brought the <strong>$69M fleet</strong> under precise, auditable management.</li>
+<li>Freed thousands of staff‑hours per survey cycle; reduced audit and licensing risk.</li>
+<li>Improved financial control and optimized vendor spend through accurate entitlement data.</li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>Transformed asset management from a reactive, manual burden into a <strong>real‑time strategic capability</strong>—strengthening compliance, reducing operational risk, and demonstrating the tangible value of <strong>automation + ML</strong> in IT operations.</td></tr></table>
+</div>
+<!-- Future slides go here -->
+<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
+<script>
+   let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>

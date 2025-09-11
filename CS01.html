@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Guru Suite Case Study Carousel
+  </title>
+<style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .carousel-slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #1e3c72;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      width: 20%;
+      background-color: #f0f3f9;
+      color: #1e3c72;
+    }
+    th span {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .carousel-nav button {
+      background-color: #1e3c72;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+<style>
+.starry-header .first-letter {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  color: #000 !important;
+  display: inline-block !important;
+  margin-right: 0.05em !important;
+}
+</style>
+</head>
+<body>
+<div class="carousel-container">
+<div class="carousel-slide active">
+<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A North America-based service provider supported 90 clients across finance and commerce. Clients were frustrated — ticket response times averaged over 20 minutes, creating significant dissatisfaction and reputational risk.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>The challenge was to reduce response times drastically, implement improvements at scale for all clients, maintain the existing toolset, and work within the constraints of current staffing levels.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>We conducted a structured discovery and designed an event processing pipeline. By analyzing each step — issue recognition, response, and ticket creation — we identified latency gaps. We then:
+       <ul>
+<li>
+         Instrumented and timestamped all actions
+        </li>
+<li>
+         Centralized tooling to simplify workflows
+        </li>
+<li>
+         Automated ticket creation via the pipeline
+        </li>
+<li>
+         Implemented duplicate suppression and client notification triggers
+        </li>
+</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Response time dropped from
+       <span style="font-weight:bold;color:black;">
+        20
+       </span>
+       minutes to
+       <span style="font-weight:bold;color:black;">
+        10
+       </span>
+       seconds — a
+       <span style="font-weight:bold;color:black;">
+        98.3%
+       </span>
+       improvement. The solution scaled across all clients and proved durable under data load.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>The automation resulted in significant operational savings, with an estimated impact of
+       <span style="font-weight:bold;color:black;">
+        $2.14
+       </span>
+       million USD annually.</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>By dramatically lowering time-to-response without adding staff, the company shifted from reactive operations to growth mode — able to onboard new clients without increasing cost, and reinvest saved time into strategic growth.</td></tr></table>
+</div>
+<!-- Future slides go here -->
+<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
+<script>
+   let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>

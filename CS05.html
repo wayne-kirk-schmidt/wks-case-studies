@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Guru Suite Case Study Carousel
+  </title>
+<style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .carousel-slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #1e3c72;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      width: 20%;
+      background-color: #f0f3f9;
+      color: #1e3c72;
+    }
+    th span {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .carousel-nav button {
+      background-color: #1e3c72;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+<style>
+.starry-header .first-letter {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  color: #000 !important;
+  display: inline-block !important;
+  margin-right: 0.05em !important;
+}
+</style>
+</head>
+<body>
+<div class="carousel-container">
+<div class="carousel-slide active">
+<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. 
+Build times had grown to over <strong>4 hours</strong>, and deployments frequently failed 
+due to inconsistent environments and manual QA steps.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>The goal was to streamline the CI/CD process to achieve <strong>sub-15-minute</strong> builds, 
+improve deployment success to excess of <strong>95%</strong>, reducing reliance on manual QA 
+by automating at least <strong>80%</strong> of regression tests.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>We implemented a containerized build system using Docker and introduced parallelized 
+workflows in GitHub Actions. Test coverage reports were integrated directly into pull requests. 
+Deployment testing ranged from backend to frontend, based on the code committed. 
+By building QA and Ready for Business tests together, we streamlined the ability to report on health.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Build times dropped to an average of <strong>11 minutes</strong>. 
+Deployment failures were reduced significantly, and deployment success was raised to <strong>98%</strong>, 
+and a full <strong>93%</strong> of regression test coverage was achieved through automation.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>The team recouped over <strong>55 engineering hours per week</strong>, enabling more focus on feature development. 
+Releases shifted from biweekly to weekly, allowing faster time-to-market.</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns. 
+The company now uses the new workflow as a standard across all engineering teams.</td></tr></table>
+</div>
+<!-- Future slides go here -->
+<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
+<script>
+   let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>

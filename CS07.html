@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Guru Suite Case Study Carousel
+  </title>
+<style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      position: relative;
+    }
+    .carousel-slide {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #1e3c72;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      width: 20%;
+      background-color: #f0f3f9;
+      color: #1e3c72;
+    }
+    th span {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+    .carousel-nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .carousel-nav button {
+      background-color: #1e3c72;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      margin: 0 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .view-all {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+<style>
+.starry-header .first-letter {
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+  color: #000 !important;
+  display: inline-block !important;
+  margin-right: 0.05em !important;
+}
+</style>
+</head>
+<body>
+<div class="carousel-container">
+<div class="carousel-slide active">
+<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A <strong>Fortune 100 investment bank</strong> managed a global estate of 60,000+ hosts. Traditional deployment and migration efforts were risky and slow; hidden dependencies caused cascading failures. The institution needed a safe way to modernize without jeopardizing trading operations.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>Design and implement a platform to map, analyze, and manage complex dependencies at scale, reducing operational risk while enabling large migration and consolidation projects.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td><ul><li>Conceived and architected the <strong>ARK</strong> platform using population‑based incremental learning for continuous dependency analysis.</li><li>Built automated impact calculators to simulate migration and upgrade scenarios before deployment.</li><li>Integrated ARK into global change workflows to provide real‑time risk assessment and decision support.</li><li>Drove adoption across programs for planned upgrades and emergency remediation.</li></ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td><ul><li><strong>97% reduction</strong> in deployment/migration risk.</li><li>Safely orchestrated migrations of up to <strong>4,000 hosts at a time</strong> across a 60,000+ system estate.</li><li><strong>17×</strong> operational efficiency improvement versus prior methods.</li></ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>Estimated project value: <strong>$9M</strong>. Realized ROI: <strong>$17M</strong> via avoided failures, reduced downtime, and accelerated migrations.</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>ARK enabled safe, large‑scale modernization without exposing trading systems to catastrophic risk. It became a cornerstone capability demonstrating how AI/ML‑inspired dependency modeling can deliver <strong>safety</strong>, <strong>speed</strong>, and <strong>scale</strong> simultaneously—reinforcing leadership in adaptive orchestration.</td></tr></table>
+</div>
+<!-- Future slides go here -->
+<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
+<script>
+   let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>
