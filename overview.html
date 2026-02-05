@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChangeIS — Case Study Overview</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --ink: #0f2742;
+      --muted: #6b7280;
+      --panel: #ffffff;
+      --border: #e5e7eb;
+      --brand: #244a86;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                   Roboto, "Helvetica Neue", Arial;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 48px 22px 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    h2 {
+      margin-top: 2.2rem;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0.75rem 0;
+      color: var(--ink);
+    }
+
+    .muted { color: var(--muted); }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 22px 40px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin-top: 18px;
+    }
+
+    .starry {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .starry div {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .letter {
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: var(--brand);
+    }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 30px 22px 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn {
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn.secondary {
+      background: #0f274215;
+      color: var(--ink);
+    }
+
+    @media (max-width: 640px) {
+      footer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ChangeIS — Project Delivery Case Studies</h1>
+  <p class="muted">
+    A practical record of how complex systems were improved, stabilized,
+    or rebuilt — using disciplined engineering, clear trade-offs,
+    and measurable outcomes.
+  </p>
+</header>
+
+<main>
+
+  <section class="panel">
+    <h2>What this is</h2>
+    <p>
+      This site is a curated set of real-world project case studies delivered
+      across financial services, security, infrastructure, and regulated
+      environments.
+    </p>
+    <p>
+      Each case study focuses on <strong>what changed</strong>, <strong>why it mattered</strong>,
+      and <strong>what was learned</strong> — not on tools for their own sake.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>How to read the case studies</h2>
+    <p>
+      Every case study is documented using the <strong>S.T.A.R.R.Y.</strong> format.
+      This keeps the narrative grounded in decisions, constraints, and results.
+    </p>
+
+    <div class="starry">
+      <div>
+        <div class="letter">S</div>
+        <div><strong>Situation</strong> — the operational or business context.</div>
+      </div>
+      <div>
+        <div class="letter">T</div>
+        <div><strong>Task</strong> — what needed to be achieved (and what could not change).</div>
+      </div>
+      <div>
+        <div class="letter">A</div>
+        <div><strong>Action</strong> — the concrete steps taken, including architecture and process.</div>
+      </div>
+      <div>
+        <div class="letter">R</div>
+        <div><strong>Result</strong> — measurable outcomes (latency, cost, risk, reliability).</div>
+      </div>
+      <div>
+        <div class="letter">R</div>
+        <div><strong>Return</strong> — financial or operational impact where quantifiable.</div>
+      </div>
+      <div>
+        <div class="letter">Y</div>
+        <div><strong>Yield</strong> — long-term leverage: capability, confidence, or optionality gained.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How to explore</h2>
+    <p>
+      Case studies can be browsed and filtered by:
+    </p>
+    <ul>
+      <li>Location (APAC, JP, EU, US, Global)</li>
+      <li>Industry</li>
+      <li>Capabilities delivered</li>
+      <li>Results, return, and yield</li>
+    </ul>
+    <p class="muted">
+      The intent is not comparison — but pattern recognition.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>About ChangeIS</h2>
+    <p>
+      ChangeIS focuses on helping organizations move from
+      <em>fragile complexity</em> to <em>intentional systems</em>.
+    </p>
+    <p>
+      Engagements typically sit at the intersection of engineering,
+      operations, security, and decision-making — where clarity,
+      not scale, is the limiting factor.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div>
+    <a class="btn" href="./index.html">Browse Case Studies</a>
+    <a class="btn secondary" href="mailto:wayne.kirk.schmidt@gmail.com">Contact</a>
+  </div>
+  <div class="muted">
+    © ChangeIS
+  </div>
+</footer>
+
+</body>
+</html>
