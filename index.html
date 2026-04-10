@@ -1,88 +1,178 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Project Delivery - Case Studies</title>
+
 <style>
-  :root {
-    --bg: #f5f7fb;
-    --ink: #0f2742;
-    --muted: #6b7280;
-    --tile-bg: #ffffff;
-    --tile-border: #e5e7eb;
-    --tile-shadow: 0 10px 18px rgba(0,0,0,.06);
-    --brand: #233b63;
-    --accent: #244a86;
-  }
-  * { box-sizing: border-box; }
+:root {
+  --ink: #0f2742;
+  --muted: #6b7280;
+  --tile-bg: #ffffff;
+  --tile-border: #e5e7eb;
+  --tile-shadow: 0 10px 18px rgba(0,0,0,.06);
+  --brand: #233b63;
+  --accent: #244a86;
+}
 
-  /* ONLY CHANGE */
-  body { 
-    margin: 0; 
-    background: var(--bg) url("background.png") center / cover no-repeat fixed;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    color: var(--ink);
-  }
+* { box-sizing: border-box; }
 
-  header { padding: 28px 22px 8px; }
-  h1 { margin: 0 0 12px; font-weight: 800; letter-spacing: .2px; }
-  main { padding: 12px 22px 12px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 
-  .grid { display: grid; gap: 18px; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  @media (max-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-  @media (max-width: 980px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
+  background:
+    linear-gradient(rgba(10,25,45,0.82), rgba(10,25,45,0.92)),
+    url("./background.png");
 
-  .tile {
-    background: var(--tile-bg);
-    border: 1px solid var(--tile-border);
-    border-radius: 16px;
-    box-shadow: var(--tile-shadow);
-    text-decoration: none; color: inherit;
-    height: 150px; display: flex; align-items: center; justify-content: center;
-    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-  }
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
-  .tile:hover { transform: translateY(-2px); border-color: #d1d5db; box-shadow: 0 16px 26px rgba(0,0,0,.08); }
+header { padding: 28px 22px 8px; }
 
-  .tile-inner { text-align: center; }
+h1 {
+  margin: 0 0 12px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #ffffff;
+}
 
-  .tile-line1 { font-size: 13px; font-weight: 800; color: #8b95a6; letter-spacing: .8px; margin-bottom: 6px; }
-  .tile-line2 { font-size: 20px; font-weight: 800; color: #244a86; letter-spacing: .3px; }
+main { padding: 12px 22px 12px; }
 
-  footer { padding: 12px 22px 28px; }
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 
-  .bottom {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 620px) 1fr;
-    gap: 12px;
-    align-items: start;
-  }
+@media (max-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 980px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
 
-  .left { justify-self: start; }
-  .center { justify-self: center; }
-  .right { justify-self: end; }
+.tile {
+  background: var(--tile-bg);
+  border: 1px solid var(--tile-border);
+  border-radius: 16px;
+  box-shadow: var(--tile-shadow);
+  text-decoration: none;
+  color: inherit;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
 
-  .btn { background: #0f2742; color: #fff; font-weight: 700; padding: 10px 16px; border-radius: 14px; text-decoration: none; }
-  .btn.secondary { background: #0f274215; color: #0f2742; }
+.tile:hover {
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+  box-shadow: 0 16px 26px rgba(0,0,0,.08);
+}
 
-  .tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-  .tab { background: #e6ebf5; color: #0f2742; padding: 8px 12px; border-radius: 12px; font-weight: 700; cursor: pointer; border: none; }
-  .tab.active { background: #21a3661a; outline: 2px solid #21a366; }
+.tile-inner { text-align: center; }
 
-  .chips { padding-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-  .chip { background: #eef2f7; color: #0f2742; padding: 6px 10px; border-radius: 999px; border: 1px solid #e2e8f0; font-weight: 600; cursor: pointer; }
-  .chip[aria-pressed="true"] { outline: 2px solid #21a366; background: #21a3661a; }
-  .chip.disabled { opacity: .5; cursor: default; }
+.tile-line1 {
+  font-size: 13px;
+  font-weight: 800;
+  color: #8b95a6;
+  letter-spacing: .8px;
+  margin-bottom: 6px;
+}
 
-  .panel { display: none; }
-  .panel.active { display: block; }
+.tile-line2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #244a86;
+  letter-spacing: .3px;
+}
 
+footer { padding: 12px 22px 28px; }
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 620px) 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.left { justify-self: start; }
+.center { justify-self: center; }
+.right { justify-self: end; }
+
+.btn {
+  background: #0f2742;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background: #ffffff22;
+  color: #ffffff;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  background: #e6ebf5;
+  color: #0f2742;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.tab.active {
+  background: #21a3661a;
+  outline: 2px solid #21a366;
+}
+
+.chips {
+  padding-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chip {
+  background: #eef2f7;
+  color: #0f2742;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  outline: 2px solid #21a366;
+  background: #21a3661a;
+}
+
+.chip.disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.panel { display: none; }
+.panel.active { display: block; }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -92,115 +182,51 @@
 <main>
 <div class="grid">
 
-<a class="tile" data-capabilities="PULSE,Instrumented Timestamped All,Centralized Tooling Simplify,Ticket Creation Pipeline,Duplicate Suppression Client" data-industries="MSP,MSSP" data-locations="US" data-results="98.3% ↑" data-return="$2.14M/yr" data-yield="Dramatically Lowering Time-to-response" href="./CS01.html">
+<a class="tile" href="./CS01.html">
 <div class="tile-inner">
 <div class="tile-line1">Case Study</div>
 <div class="tile-line2">PULSE</div>
 </div>
 </a>
 
-<a class="tile" data-capabilities="COMPASS,Rapidly Developed Capability,Evaluated Three Major" data-industries="Monitoring" data-locations="EU" data-yield="Beyond Cloud Strategy" href="./CS02.html">
+<a class="tile" href="./CS02.html">
 <div class="tile-inner">
 <div class="tile-line1">Case Study</div>
 <div class="tile-line2">COMPASS</div>
 </div>
 </a>
 
-<a class="tile" data-capabilities="NXT RAW,Deployed Ultra-low Latency,Optimized Networking Memory,Filed Received Patent" data-industries="Financial" data-locations="APAC,JP" data-yield="Low Latency" href="./CS03.html">
+<a class="tile" href="./CS03.html">
 <div class="tile-inner">
 <div class="tile-line1">Case Study</div>
 <div class="tile-line2">NXT RAW</div>
 </div>
 </a>
 
-<a class="tile" data-capabilities="BEACON,Started Assumption Compromised,Analyzed First Second,Detected Predictable Malicious,Lightweight Telemetry Agents,Tuned ML Models" data-industries="Security" data-locations="EU,JP,US" data-results="97%" data-yield="Automation" href="./CS04.html">
+<a class="tile" href="./CS04.html">
 <div class="tile-inner">
 <div class="tile-line1">Case Study</div>
 <div class="tile-line2">BEACON</div>
 </div>
 </a>
 
-<a class="tile" data-capabilities="SPARROW,Implemented Containerized Build,Workflows Github Actions,Test Coverage Reports,Deployment Testing Ranged,Building QA Ready" data-industries="Fintech" data-locations="JP" data-results="98%,93%" data-yield="Engagement Demonstrated How" href="./CS05.html">
+<a class="tile" href="./CS05.html">
 <div class="tile-inner">
 <div class="tile-line1">Case Study</div>
 <div class="tile-line2">SPARROW</div>
 </div>
 </a>
 
-<a class="tile" data-capabilities="HAVEN,Audited Systems Implemented,Virtualized Environment Testing,Streamlined Installs Added" data-industries="Food and Beverage" data-locations="JP" data-results="99.7% ↑,3×" data-return="$4M/yr,900h/yr" data-yield="Strategic Flexibility Long-term" href="./CS06.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">HAVEN</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="ARK,Conceived Architected ARK,Impact Calculators Simulate,Integrated ARK Global,Drove Adoption Programs" data-industries="Financial" data-locations="Global" data-results="97% ↓,17×" data-return="$9M/yr,$17M/yr" data-yield="Lower Risk,Faster Delivery" href="./CS07.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">ARK</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="BRAVO,Architected BRAVO Data,Integrated CI CD,Dashboards Engineering QA" data-industries="Security" data-locations="Global" data-results="d→h" data-return="$1.8M/yr" data-yield="Analytics" href="./CS08.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">BRAVO</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="DISPATCH,Organized Help Desk,Classification Routing Rules,Delivered Training Process,Enhanced Ticketing System,Stood UP Continuous" data-industries="Insurance" data-locations="APAC,JP" data-results="45% ↓" data-return="$2.36M/yr" data-yield="Proactive,Standardized,Automation" href="./CS09.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">DISPATCH</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="LEDGER,Distributed Discovery Engine,Applied Machine Learning,Integrated License Configuration,Delivered Dashboards Reports" data-industries="Insurance" data-locations="APAC,JP" data-results="75%,99.92%,8weeks→2h" data-return="$69M/yr" data-yield="Automation,Compliance,Lower Risk" href="./CS10.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">LEDGER</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="AEGIS,AEGIS Actions Settings,Scripts Methods Harden,Enforcement Toolkit Policy,Declarative Baselines Automated,Exposed Central CLI" data-industries="Financial" data-locations="Global" data-results="weeks→hforcommontasks" data-yield="Established Sustainable Code" href="./CS11.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">AEGIS</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="FLEET,Architected Distributed Software,Rollback State Comparison,Inventory Compliance Checks,Scheduled Maintenance Windows" data-industries="Office and Document Solutions" data-locations="US" data-yield="Demonstrated Manage Anywhere" href="./CS12.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">FLEET</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="SWITCHBOARD,Offerings Including Physical,Defined Topology Templates,Push Rollback Lab,Integrated Scripts Provision,Added Traffic Generation" data-industries="Financial" data-locations="Global" data-results="d→m" data-yield="IaC,Faster Delivery" href="./CS13.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">SWITCHBOARD</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="TRACE,Formalized End End,Templates Intake Forms,Generative AI Agent,Grade Reports Against,Draft New Reports" data-industries="Financial" data-locations="Regional" data-yield="Automation,Agent,PIM" href="./CS14.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">TRACE</div>
-</div>
-</a>
-
-<a class="tile" data-capabilities="MAESTRO,MAESTRO Machine Learning,Builds Testing Playbooks,MAESTRO Prioritizes Scenarios,Improve Coverage Efficiency" data-industries="Financial" data-locations="Global" data-results="17% ↑,2% ↑,12d→3h,6h→10m,3×,MTTR 6h" data-return="$2.75M/yr" data-yield="Automation,Confidence,Faster Delivery" href="./CS15.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">MAESTRO</div>
-</div>
-</a>
-
 </div>
 </main>
 
-<!-- footer + script unchanged -->
+<footer>
+<div class="bottom">
+<div class="left">
+<a class="btn" href="./overview.html">Overview</a>
+</div>
+</div>
+</footer>
 
 </body>
 </html>
