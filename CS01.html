@@ -7,15 +7,14 @@
 
 <style>
 /* =========================
-   BODY — REAL BACKGROUND (NO OVERLAY)
+   BODY — REAL BACKGROUND
 ========================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 
-  /* USE YOUR REAL IMAGE */
-  background-image: url("/background.png"); /* <-- adjust path if needed */
+  background-image: url("/background.png"); /* adjust path if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,12 +33,11 @@ body {
 }
 
 /* =========================
-   CARD — LET BACKGROUND SHOW
+   CARD
 ========================= */
 .carousel-slide {
   display: none;
 
-  /* LESS OPAQUE → background visible */
   background: rgba(255, 255, 255, 0.85);
 
   border-radius: 14px;
@@ -47,7 +45,6 @@ body {
 
   border-left: 6px solid #244a86;
 
-  /* stronger shadow for contrast */
   box-shadow: 0 30px 80px rgba(0,0,0,0.45);
 
   backdrop-filter: blur(3px);
@@ -72,16 +69,32 @@ th, td {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* LEFT COLUMN */
+/* =========================
+   STARRY STRUCTURE (UPGRADED)
+========================= */
 th {
-  width: 20%;
-  background-color: rgba(36, 74, 134, 0.08);
+  width: 22%;
+
+  background: rgba(36, 74, 134, 0.12);
+
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+
   color: #244a86;
+
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
-th span {
-  font-weight: bold;
-  font-size: 1.25rem;
+.starry-header {
+  font-size: 0.85rem;
+}
+
+.starry-header .first-letter {
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #0f2742;
+  margin-right: 4px;
 }
 
 /* =========================
@@ -127,17 +140,6 @@ ul {
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-}
-
-/* =========================
-   STARRY LETTER
-========================= */
-.starry-header .first-letter {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
-  color: #244a86 !important;
-  display: inline-block !important;
-  margin-right: 0.05em !important;
 }
 
 /* =========================
