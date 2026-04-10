@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Project Delivery - Case Studies</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ChangeIS — Case Study Overview</title>
 
 <style>
 :root {
-  --bg: #f5f7fb;
   --ink: #0f2742;
   --muted: #6b7280;
-  --tile-bg: #ffffff;
-  --tile-border: #e5e7eb;
-  --tile-shadow: 0 10px 18px rgba(0,0,0,.06);
-  --brand: #233b63;
-  --accent: #244a86;
+  --brand: #244a86;
 }
 
 * { box-sizing: border-box; }
 
 /* =========================
-   BACKGROUND (FIXED)
+   BACKGROUND
 ========================= */
 body {
   margin: 0;
@@ -32,108 +26,127 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
 }
 
 /* =========================
    HEADER (WHITE TEXT)
 ========================= */
-header { padding: 28px 22px 8px; }
+header {
+  padding: 48px 22px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-h1 {
+header h1 {
   margin: 0 0 12px;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: .2px;
   color: #ffffff;
+}
+
+header p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* readability boost */
+header h1,
+header p {
   text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
 /* =========================
-   MAIN
+   LAYOUT
 ========================= */
-main { padding: 12px 22px 12px; }
-
-/* =========================
-   GRID
-========================= */
-.grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+h2 {
+  margin-top: 2.2rem;
+  font-size: 1.35rem;
+  font-weight: 800;
 }
 
-@media (max-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 980px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
+p { margin: 0.75rem 0; }
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 22px 40px;
+}
 
 /* =========================
-   TILE (FLOATING)
+   PANELS
 ========================= */
-.tile {
+.panel {
   background: rgba(255,255,255,0.88);
   border-radius: 16px;
+  padding: 24px 26px;
+  margin-top: 18px;
 
-  text-decoration: none;
-  color: var(--ink);
-
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
   backdrop-filter: blur(4px);
 
-  transition: transform .12s ease, box-shadow .12s ease;
+  color: var(--ink);
 }
 
-.tile:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+/* =========================
+   STARRY
+========================= */
+.starry {
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
 }
 
-.tile-inner { text-align: center; }
-
-.tile-line1 {
-  font-size: 13px;
-  font-weight: 800;
-  color: #8b95a6;
-  letter-spacing: .8px;
-  margin-bottom: 6px;
+.starry div {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: start;
 }
 
-.tile-line2 {
-  font-size: 20px;
-  font-weight: 800;
-  color: #244a86;
+.letter {
+  font-weight: 900;
+  font-size: 1.35rem;
+  color: var(--brand);
+}
+
+/* =========================
+   MUTED TEXT FIX
+========================= */
+.muted {
+  color: #6b7280;
+}
+
+/* when muted text is outside panels */
+main .muted:not(.panel .muted),
+footer .muted {
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
 /* =========================
    FOOTER
 ========================= */
 footer {
-  padding: 12px 22px 28px;
-  color: rgba(255,255,255,0.9);
-}
-
-.bottom {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 22px 60px;
   display: grid;
-  grid-template-columns: 1fr minmax(0, 620px) 1fr;
-  gap: 12px;
-  align-items: start;
-}
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
 
-.left { justify-self: start; }
-.center { justify-self: center; }
-.right { justify-self: end; }
+  color: rgba(255,255,255,0.75);
+}
 
 .btn {
   background: #0f2742;
   color: #fff;
-  font-weight: 700;
   padding: 10px 16px;
   border-radius: 14px;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -142,180 +155,94 @@ footer {
   color: #ffffff;
 }
 
-/* =========================
-   FILTERS
-========================= */
-.tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+@media (max-width: 640px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
-
-.tab {
-  background: rgba(255,255,255,0.85);
-  color: #0f2742;
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-}
-
-.tab.active {
-  background: #244a86;
-  color: #fff;
-}
-
-.chips {
-  padding-top: 10px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.chip {
-  background: rgba(255,255,255,0.85);
-  color: #0f2742;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.chip[aria-pressed="true"] {
-  background: #244a86;
-  color: #fff;
-}
-
-.chip.disabled {
-  opacity: .5;
-  cursor: default;
-}
-
-.panel { display: none; }
-.panel.active { display: block; }
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Project Delivery - Case Studies</h1>
+  <h1>ChangeIS — Project Delivery Case Studies</h1>
+  <p>
+    A practical record of how complex systems were improved, stabilized,
+    or rebuilt — using disciplined engineering, clear trade-offs,
+    and measurable outcomes.
+  </p>
 </header>
 
 <main>
-<div class="grid">
 
-<!-- ALL ORIGINAL TILES — UNCHANGED -->
-<!-- (PASTED EXACTLY FROM YOUR FILE) -->
+  <section class="panel">
+    <h2>What this is</h2>
+    <p>
+      This site is a curated set of real-world project case studies delivered
+      across financial services, security, infrastructure, and regulated
+      environments.
+    </p>
+    <p>
+      Each case study focuses on <strong>what changed</strong>, <strong>why it mattered</strong>,
+      and <strong>what was learned</strong> — not on tools for their own sake.
+    </p>
+  </section>
 
-<a class="tile" data-capabilities="PULSE,Instrumented Timestamped All,Centralized Tooling Simplify,Ticket Creation Pipeline,Duplicate Suppression Client" data-industries="MSP,MSSP" data-locations="US" data-results="98.3% ↑" data-return="$2.14M/yr" data-yield="Dramatically Lowering Time-to-response" href="./CS01.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">PULSE</div>
-</div>
-</a>
+  <section class="panel">
+    <h2>How to read the case studies</h2>
+    <p>
+      Every case study is documented using the <strong>S.T.A.R.R.Y.</strong> format.
+      This keeps the narrative grounded in decisions, constraints, and results.
+    </p>
 
-<!-- (ALL OTHER TILES REMAIN EXACTLY THE SAME — NO CHANGES MADE) -->
+    <div class="starry">
+      <div><div class="letter">S</div><div><strong>Situation</strong> — the operational or business context.</div></div>
+      <div><div class="letter">T</div><div><strong>Task</strong> — what needed to be achieved (and what could not change).</div></div>
+      <div><div class="letter">A</div><div><strong>Action</strong> — the concrete steps taken, including architecture and process.</div></div>
+      <div><div class="letter">R</div><div><strong>Result</strong> — measurable outcomes (latency, cost, risk, reliability).</div></div>
+      <div><div class="letter">R</div><div><strong>Return</strong> — financial or operational impact where quantifiable.</div></div>
+      <div><div class="letter">Y</div><div><strong>Yield</strong> — long-term leverage: capability, confidence, or optionality gained.</div></div>
+    </div>
+  </section>
 
-</div>
+  <section class="panel">
+    <h2>How to explore</h2>
+    <p>Case studies can be browsed and filtered by:</p>
+    <ul>
+      <li>Location (APAC, JP, EU, US, Global)</li>
+      <li>Industry</li>
+      <li>Capabilities delivered</li>
+      <li>Results, return, and yield</li>
+    </ul>
+    <p class="muted">
+      The intent is not comparison — but pattern recognition.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>About ChangeIS</h2>
+    <p>
+      ChangeIS focuses on helping organizations move from
+      <em>fragile complexity</em> to <em>intentional systems</em>.
+    </p>
+    <p>
+      Engagements typically sit at the intersection of engineering,
+      operations, security, and decision-making — where clarity,
+      not scale, is the limiting factor.
+    </p>
+  </section>
+
 </main>
 
 <footer>
-<div class="bottom">
-
-<div class="left">
-<a class="btn" href="./overview.html">Overview</a>
-</div>
-
-<div class="center">
-
-<div class="tabs">
-<button class="tab active" data-tab="locations">Locations</button>
-<button class="tab" data-tab="industries">Industries</button>
-<button class="tab" data-tab="capabilities">Capabilities</button>
-<button class="tab" data-tab="results">Results</button>
-<button class="tab" data-tab="return">Return</button>
-<button class="tab" data-tab="yield">Yield</button>
-</div>
-
-<div class="panel active" id="panel-locations">
-<div class="chips">
-<button class="chip" data-cat="locations" data-val="APAC">APAC</button>
-<button class="chip" data-cat="locations" data-val="EU">EU</button>
-<button class="chip" data-cat="locations" data-val="Global">Global</button>
-<button class="chip" data-cat="locations" data-val="JP">JP</button>
-<button class="chip" data-cat="locations" data-val="Regional">Regional</button>
-<button class="chip" data-cat="locations" data-val="US">US</button>
-</div>
-</div>
-
-<!-- ALL OTHER PANELS — UNCHANGED -->
-
-</div>
-
-<div class="right">
-<a class="btn secondary" href="#" id="clearBtn" onclick="return false;">Clear filters</a>
-</div>
-
-</div>
+  <div>
+    <a class="btn" href="./index.html">Browse Case Studies</a>
+    <a class="btn secondary" href="mailto:wayne.kirk.schmidt@gmail.com">Contact</a>
+  </div>
+  <div class="muted">© ChangeIS</div>
 </footer>
-
-<script>
-
-/* YOUR ORIGINAL JS — UNCHANGED */
-
-function activate(name) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('panel-' + name).classList.add('active');
-}
-
-document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => activate(t.dataset.tab)));
-
-const active = { locations: new Set(), industries: new Set(), capabilities: new Set(), results: new Set(), return: new Set(), yield: new Set() };
-
-function applyFilters() {
-  const tiles = document.querySelectorAll('.tile');
-  tiles.forEach(tile => {
-    let visible = true;
-    for (const cat of Object.keys(active)) {
-      const needed = active[cat];
-      if (needed.size === 0) continue;
-      const vals = (tile.dataset[cat] || '').split(',').map(s => s.trim()).filter(Boolean);
-      let match = false;
-      for (const v of needed) { if (vals.includes(v)) { match = true; break; } }
-      if (!match) { visible = false; break; }
-    }
-    tile.style.display = visible ? '' : 'none';
-  });
-}
-
-function resetFilters() {
-  for (const cat of Object.keys(active)) active[cat].clear();
-  document.querySelectorAll('.chip').forEach(ch => ch.setAttribute('aria-pressed','false'));
-  applyFilters();
-}
-
-document.body.addEventListener('click', function(e) {
-  const t = e.target;
-  if (t && t.classList.contains('chip')) {
-    const cat = t.dataset.cat;
-    const val = t.dataset.val;
-    const pressed = t.getAttribute('aria-pressed') === 'true';
-    t.setAttribute('aria-pressed', pressed ? 'false' : 'true');
-    if (pressed) active[cat].delete(val); else active[cat].add(val);
-    applyFilters();
-  }
-});
-
-document.getElementById('clearBtn').addEventListener('click', resetFilters);
-
-</script>
 
 </body>
 </html>
