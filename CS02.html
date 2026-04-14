@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Guru Suite Case Study Carousel</title>
+<title>Case Study — COMPASS</title>
 
 <style>
 /* =========================
-   BODY — REAL BACKGROUND
+   BODY — MATCH CS01
 ========================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 
-  background-image: url("./background.png"); /* adjust path if needed */
+  background-image: url("/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,25 +33,19 @@ body {
 }
 
 /* =========================
-   CARD
+   CARD (STATIC — NO CAROUSEL)
 ========================= */
 .carousel-slide {
-  display: none;
+  display: block;
 
   background: rgba(255, 255, 255, 0.85);
-
   border-radius: 14px;
   padding: 2rem;
 
   border-left: 6px solid #244a86;
 
   box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-
   backdrop-filter: blur(3px);
-}
-
-.carousel-slide.active {
-  display: block;
 }
 
 /* =========================
@@ -70,17 +64,13 @@ th, td {
 }
 
 /* =========================
-   STARRY STRUCTURE (UPGRADED)
+   STARRY STRUCTURE
 ========================= */
 th {
   width: 22%;
-
   background: rgba(36, 74, 134, 0.12);
-
   border-right: 2px solid rgba(36, 74, 134, 0.25);
-
   color: #244a86;
-
   font-weight: 800;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -103,25 +93,6 @@ th {
 ul {
   margin-top: 0.5rem;
   padding-left: 1.25rem;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.carousel-nav {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.carousel-nav button {
-  background-color: #244a86;
-  color: white;
-  padding: 0.6rem 1rem;
-  border: none;
-  margin: 0 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 /* =========================
@@ -168,57 +139,73 @@ ul {
 </head>
 
 <body>
+
 <div class="carousel-container">
-<div class="carousel-slide active">
-<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A European-based IT monitoring company sought a strategic roadmap for cloud adoption. With trends shifting toward cloud and hybrid deployments, leadership aimed to ensure ongoing client relevance and competitiveness.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>Assess the cloud technology landscape and craft a multi-cloud delivery approach, aligned with the company's operational model and considering both major commercial and leading free cloud offerings.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>We rapidly developed a capability mapping framework, enabling side-by-side comparisons of cloud platforms by key features and strengths. We evaluated three major providers and top-tier open-source alternatives, and outlined how development, testing, and delivery capabilities could evolve through cloud adoption.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Delivered a comprehensive transition blueprint, empowering management to budget and plan a
-       <span style="font-weight:bold;color:black;">
-        15
-       </span>
-       –
-       <span style="font-weight:bold;color:black;">
-        18
-       </span>
-       month phased cloud journey with confidence, mitigating risk of transition disruption.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>The framework accelerated decision-making and operational ramp-up. Instead of the typical
-       <span style="font-weight:bold;color:black;">
-        6
-       </span>
-       –
-       <span style="font-weight:bold;color:black;">
-        9
-       </span>
-       month effort requiring six people, we delivered a comprehensive strategic plan in one month with two people — achieving a
-       <span style="font-weight:bold;color:black;">
-        78%
-       </span>
-       operational savings. The strategy also enabled a “follow the sun” Dev/QA/Delivery model, improved software delivery velocity by
-       <span style="font-weight:bold;color:black;">
-        5
-       </span>
-       x, and streamlined client deployments by reducing installation time by
-       <span style="font-weight:bold;color:black;">
-        93%
-       </span>
-       .</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>Beyond cloud strategy, the project catalyzed the company's broader digital transformation. Initially aimed at enhancing client relevance, it ultimately elevated their product offerings, operational efficiency, and market agility.</td></tr></table>
+
+<div class="carousel-slide">
+
+<table>
+
+<tr>
+<th class="starry-header"><span class="first-letter">S</span>ituation</th>
+<td>
+A European-based IT monitoring company sought a strategic roadmap for cloud adoption. With trends shifting toward cloud and hybrid deployments, leadership aimed to ensure ongoing client relevance and competitiveness.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">T</span>ask</th>
+<td>
+Assess the cloud technology landscape and craft a multi-cloud delivery approach, aligned with the company's operational model and considering both major commercial and leading free cloud offerings.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">A</span>ction</th>
+<td>
+We rapidly developed a capability mapping framework, enabling side-by-side comparisons of cloud platforms by key features and strengths. We evaluated three major providers and top-tier open-source alternatives, and outlined how development, testing, and delivery capabilities could evolve through cloud adoption.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>esult</th>
+<td>
+Delivered a comprehensive transition blueprint, empowering management to budget and plan a
+<strong>15–18 month</strong> phased cloud journey with confidence, mitigating risk of transition disruption.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>eturn</th>
+<td>
+The framework accelerated decision-making and operational ramp-up. Instead of the typical
+<strong>6–9 month</strong> effort requiring six people, we delivered a comprehensive strategic plan in one month with two people — achieving a
+<strong>78%</strong> operational savings.
+
+<br><br>
+
+The strategy also enabled a “follow the sun” Dev/QA/Delivery model, improved software delivery velocity by
+<strong>5×</strong>, and reduced installation time by
+<strong>93%</strong>.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">Y</span>ield</th>
+<td>
+Beyond cloud strategy, the project catalyzed the company's broader digital transformation. Initially aimed at enhancing client relevance, it ultimately elevated their product offerings, operational efficiency, and market agility.
+</td>
+</tr>
+
+</table>
+
 </div>
-<!-- Future slides go here -->
-<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
-<script>
-   let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
 
-    function showSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
+<div class="overview-only">
+<a href="index.html">Overview</a>
+</div>
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+</div>
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-  </script>
 </body>
 </html>
