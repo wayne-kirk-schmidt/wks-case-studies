@@ -26,18 +26,16 @@ body {
 /* =========================
    CONTAINER
 ========================= */
-.carousel-container {
+.container {
   max-width: 960px;
   margin: 4rem auto;
   padding: 0 16px 40px;
 }
 
 /* =========================
-   CARD (STATIC)
+   CARD
 ========================= */
-.carousel-slide {
-  display: block;
-
+.card {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 14px;
   padding: 2rem;
@@ -96,14 +94,14 @@ ul {
 }
 
 /* =========================
-   OVERVIEW BUTTON
+   BUTTON
 ========================= */
-.overview-only {
+.footer {
   text-align: center;
   margin-top: 2rem;
 }
 
-.overview-only a {
+.footer a {
   display: inline-block;
   background: #0f2742;
   color: #fff;
@@ -117,7 +115,7 @@ ul {
    MOBILE
 ========================= */
 @media (max-width: 720px) {
-  .carousel-slide {
+  .card {
     padding: 1.2rem;
   }
 
@@ -140,23 +138,23 @@ ul {
 
 <body>
 
-<div class="carousel-container">
+<div class="container">
 
-<div class="carousel-slide">
+<div class="card">
 
 <table>
 
 <tr>
 <th class="starry-header"><span class="first-letter">S</span>ituation</th>
 <td>
-A top-tier security firm needed a faster, more reliable way to identify compromised systems across a large distributed environment. Traditional monitoring was reactive, slow, and generated excessive false positives.
+A top-tier security firm needed a cleaner, faster way to identify compromised systems across a large distributed environment. Traditional monitoring was reactive, slow, and produced excessive false positives.
 </td>
 </tr>
 
 <tr>
 <th class="starry-header"><span class="first-letter">T</span>ask</th>
 <td>
-Design BEACON, a machine learning platform capable of detecting compromise in near real-time by analyzing network behavior at scale with minimal analyst overhead.
+Design BEACON, a machine learning platform capable of detecting compromise in near real-time using network behavior analysis at global scale with minimal analyst overhead.
 </td>
 </tr>
 
@@ -164,12 +162,12 @@ Design BEACON, a machine learning platform capable of detecting compromise in ne
 <th class="starry-header"><span class="first-letter">A</span>ction</th>
 <td>
 <ul>
-<li>Started from the assumption that compromised systems alter their network footprint</li>
+<li>Assumed compromised systems alter network footprint in measurable ways</li>
 <li>Analyzed first and second derivatives of network traffic</li>
-<li>Detected predictable malicious behaviors such as command-and-control activity</li>
+<li>Detected predictable malicious behaviors (C2, scanning, probing)</li>
 <li>Built lightweight telemetry agents feeding a real-time detection engine</li>
-<li>Tuned ML models for high precision to minimize false positives</li>
-<li>Integrated analytics with SOC workflows and automated response pipelines</li>
+<li>Tuned ML models for high precision</li>
+<li>Integrated analytics with SOC workflows and automated response</li>
 </ul>
 </td>
 </tr>
@@ -178,9 +176,9 @@ Design BEACON, a machine learning platform capable of detecting compromise in ne
 <th class="starry-header"><span class="first-letter">R</span>esult</th>
 <td>
 <ul>
-<li><strong>97% faster detection</strong> compared to legacy tools</li>
-<li>Identified threats previously missed by traditional monitoring</li>
-<li>Reduced detection time to near real-time</li>
+<li><strong>97% faster detection</strong></li>
+<li>Identified threats missed by traditional monitoring</li>
+<li>Near real-time detection achieved</li>
 </ul>
 </td>
 </tr>
@@ -189,9 +187,9 @@ Design BEACON, a machine learning platform capable of detecting compromise in ne
 <th class="starry-header"><span class="first-letter">R</span>eturn</th>
 <td>
 <ul>
-<li>Reduced analyst workload by <strong>85%</strong></li>
-<li>Lowered breach remediation costs by up to <strong>17×</strong></li>
-<li>Improved overall SOC efficiency and incident response impact</li>
+<li><strong>85% reduction</strong> in analyst workload</li>
+<li>Up to <strong>17× reduction</strong> in remediation cost</li>
+<li>Improved SOC efficiency</li>
 </ul>
 </td>
 </tr>
@@ -199,7 +197,7 @@ Design BEACON, a machine learning platform capable of detecting compromise in ne
 <tr>
 <th class="starry-header"><span class="first-letter">Y</span>ield</th>
 <td>
-Demonstrated how machine learning can be operationalized for real-time security detection at scale, enabling broader automation and measurable improvements in cyber resilience.
+Enabled operationalization of machine learning for real-time security detection at scale, improving automation and cyber resilience.
 </td>
 </tr>
 
@@ -207,7 +205,7 @@ Demonstrated how machine learning can be operationalized for real-time security 
 
 </div>
 
-<div class="overview-only">
+<div class="footer">
 <a href="index.html">Overview</a>
 </div>
 
