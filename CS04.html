@@ -1,131 +1,217 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-   Guru Suite Case Study Carousel
-  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Case Study — BEACON</title>
+
 <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-    }
-    .carousel-container {
-      max-width: 960px;
-      margin: 2rem auto;
-      position: relative;
-    }
-    .carousel-slide {
-      display: none;
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-left: 6px solid #1e3c72;
-    }
-    .carousel-slide.active {
-      display: block;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
-      padding: 1rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    th {
-      width: 20%;
-      background-color: #f0f3f9;
-      color: #1e3c72;
-    }
-    th span {
-      font-weight: bold;
-      font-size: 1.25rem;
-    }
-    ul {
-      margin-top: 0.5rem;
-      padding-left: 1.25rem;
-    }
-    .carousel-nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .carousel-nav button {
-      background-color: #1e3c72;
-      color: white;
-      padding: 0.6rem 1rem;
-      border: none;
-      margin: 0 0.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .view-all {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .view-all a {
-      color: #1e3c72;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-<style>
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #0f2742;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.carousel-container {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 16px 40px;
+}
+
+/* =========================
+   CARD (STATIC)
+========================= */
+.carousel-slide {
+  display: block;
+
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  padding: 2rem;
+
+  border-left: 6px solid #244a86;
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* =========================
+   STARRY STRUCTURE
+========================= */
+th {
+  width: 22%;
+  background: rgba(36, 74, 134, 0.12);
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+  color: #244a86;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.starry-header {
+  font-size: 0.85rem;
+}
+
 .starry-header .first-letter {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
-  color: #000 !important;
-  display: inline-block !important;
-  margin-right: 0.05em !important;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #0f2742;
+  margin-right: 4px;
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+/* =========================
+   OVERVIEW BUTTON
+========================= */
+.overview-only {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.overview-only a {
+  display: inline-block;
+  background: #0f2742;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 720px) {
+  .carousel-slide {
+    padding: 1.2rem;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    border-bottom: none;
+    padding-bottom: 0.3rem;
+  }
+
+  td {
+    padding-top: 0.3rem;
+  }
 }
 </style>
 </head>
+
 <body>
+
 <div class="carousel-container">
-<div class="carousel-slide active">
-<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td><p class="p2"><span class="s2">A <b>Top‑Tier Security Firm</b> needed a cleaner, faster way to identify compromised systems across a large, distributed environment. Traditional monitoring was reactive, slow, and produced excessive false positives, delaying response.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td><p class="p2"><span class="s2">Design <b>BEACON</b>, a machine‑learning platform that could proactively detect compromise in near real‑time by analyzing changes in network behavior, at global scale and with minimal analyst overhead.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td><ul class="ul1">
-<li class="li2"><span class="s3"></span><span class="s2">Started from the assumption that <b>compromised systems change their network footprint</b> in measurable ways.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Analyzed the <b>first and second derivatives of network traffic</b> to expose rapid shifts and emerging patterns.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Detected <b>predictable malicious behaviors</b> such as C2 (command‑and‑control) communications, unauthorized scans, and probing activity.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Built lightweight telemetry agents feeding a real‑time anomaly detection engine.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Tuned ML models for high precision to minimize false positives.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Integrated streaming analytics with SOC workflows and orchestration/ticketing for automated response.</span></li>
-</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td><ul class="ul1">
-<li class="li2"><span class="s3"><b></b></span><span class="s2"><b>97% faster</b> detection of compromised systems versus legacy tools.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Identified insider threats and beaconing activity previously missed by traditional monitoring.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Reduced median detection times to near real‑time.</span></li>
-</ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td><ul class="ul1">
-<li class="li2"><span class="s3"></span><span class="s2">Reduced analyst workload by <b>85%</b> through fewer false positives and streamlined triage.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Lowered breach remediation costs by up to <b>17×</b>.</span></li>
-<li class="li2"><span class="s3"></span><span class="s2">Significant improvements in overall SOC efficiency and incident impact reduction.</span></li>
-</ul></td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td><p class="p2"><span class="s2">Proved the value of operationalizing ML for <b>real‑time security detection</b> at scale, enabling broader automation across business units and delivering a measurable uplift in cyber resilience.</span></p></td></tr></table>
+
+<div class="carousel-slide">
+
+<table>
+
+<tr>
+<th class="starry-header"><span class="first-letter">S</span>ituation</th>
+<td>
+A top-tier security firm needed a faster, more reliable way to identify compromised systems across a large distributed environment. Traditional monitoring was reactive, slow, and generated excessive false positives.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">T</span>ask</th>
+<td>
+Design BEACON, a machine learning platform capable of detecting compromise in near real-time by analyzing network behavior at scale with minimal analyst overhead.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">A</span>ction</th>
+<td>
+<ul>
+<li>Started from the assumption that compromised systems alter their network footprint</li>
+<li>Analyzed first and second derivatives of network traffic</li>
+<li>Detected predictable malicious behaviors such as command-and-control activity</li>
+<li>Built lightweight telemetry agents feeding a real-time detection engine</li>
+<li>Tuned ML models for high precision to minimize false positives</li>
+<li>Integrated analytics with SOC workflows and automated response pipelines</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>esult</th>
+<td>
+<ul>
+<li><strong>97% faster detection</strong> compared to legacy tools</li>
+<li>Identified threats previously missed by traditional monitoring</li>
+<li>Reduced detection time to near real-time</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>eturn</th>
+<td>
+<ul>
+<li>Reduced analyst workload by <strong>85%</strong></li>
+<li>Lowered breach remediation costs by up to <strong>17×</strong></li>
+<li>Improved overall SOC efficiency and incident response impact</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">Y</span>ield</th>
+<td>
+Demonstrated how machine learning can be operationalized for real-time security detection at scale, enabling broader automation and measurable improvements in cyber resilience.
+</td>
+</tr>
+
+</table>
+
 </div>
-<!-- Future slides go here -->
-<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
-<script>
-   let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
 
-    function showSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
+<div class="overview-only">
+<a href="index.html">Overview</a>
+</div>
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+</div>
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-  </script>
 </body>
 </html>
