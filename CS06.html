@@ -2,111 +2,113 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-   Guru Suite Case Study Carousel
-  </title>
 <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+/* === BODY === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("./background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #0f2742;
+}
 
-      background-image: url("/background.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+/* === CONTAINER === */
+.carousel-container {
+  max-width: 860px;
+  margin: 3rem auto;
+  padding: 0 16px 40px;
+}
 
-      color: #0f2742;
-    }
-    .carousel-container {
-      max-width: 960px;
-      margin: 4rem auto;
-      padding: 0 16px 40px;
-    }
-    .carousel-slide {
-      display: block;
-      background: rgba(255,255,255,0.85);
-      border-radius: 14px;
-      padding: 2rem;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-      border-left: 6px solid #244a86;
-      backdrop-filter: blur(3px);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
-      padding: 1rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    th {
-      width: 20%;
-      background-color: #f0f3f9;
-      color: #1e3c72;
-    }
-    th span {
-      font-weight: bold;
-      font-size: 1.25rem;
-    }
-    ul {
-      margin-top: 0.5rem;
-      padding-left: 1.25rem;
-    }
-    .overview-only {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .overview-only a {
-      display: inline-block;
-      background: #0f2742;
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-    }
+/* === CARD === */
+.carousel-slide {
+  display: block;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  padding: 2rem;
+  border-left: 6px solid #244a86;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+}
 
-    @media (max-width: 720px) {
-      .carousel-slide {
-        padding: 1.2rem;
-      }
+/* === TABLE === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-      th, td {
-        display: block;
-        width: 100%;
-      }
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-      th {
-        border-bottom: none;
-        padding-bottom: 0.3rem;
-      }
+th {
+  width: 22%;
+  background: rgba(36, 74, 134, 0.12);
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+  color: #244a86;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
 
-      td {
-        padding-top: 0.3rem;
-      }
-    }
-  </style>
-<style>
+.starry-header { font-size: 0.85rem; }
+
 .starry-header .first-letter {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
-  color: #000 !important;
-  display: inline-block !important;
-  margin-right: 0.05em !important;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #0f2742;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+/* === NAV === */
+.overview-only {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.overview-only a {
+  display: inline-block;
+  background: #0f2742;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === MOBILE === */
+@media (max-width: 720px) {
+  .carousel-slide { padding: 1.2rem; }
+  th, td { display: block; width: 100%; }
+  th { border-bottom: none; padding-bottom: 0.3rem; }
+  td { padding-top: 0.3rem; }
 }
 </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ANCHOR — ChangeIS Case Study</title>
+
+
 </head>
 <body>
 <div class="carousel-container">
 <div class="carousel-slide">
 <table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A top-10 global beverage company faced infrastructure risk in Japan due to legacy systems with <strong>single points of failure</strong>, threatening <strong>tens of millions in revenue</strong>. The goal was to <strong>de-risk operations</strong> and enable safe software deployment.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>Remove risk with <strong>minimal disruption</strong>. Ensure <strong>minute-level recovery</strong>, modernize hardware, and stay within cost and effort constraints.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>Audited systems and implemented backups. Built a <strong>virtualized environment</strong> for testing and rapid provisioning. Streamlined installs, added monitoring, and deployed a user-friendly hypervisor and backup suite to support recovery and staging.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Reliability improved to <strong>99.7%</strong>. Builds dropped to <strong>1.5 hours</strong>, restores to <strong>5 minutes</strong>. Processing sped up 3×. Local teams gained performance and readiness for future cloud migration.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>Protected <strong>$4M/year in revenue</strong>. Saved <strong>900+ hours annually</strong>. Improved client experience and enabled staff to focus on business growth.</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>Enabled strategic flexibility and long-term planning. Virtualization + modernization formed a repeatable model for <strong>secure, scalable transformation</strong>.</td></tr></table>
 </div>
-<div class="overview-only"><a href="index.html">Overview</a></div></div>
+<div class="overview-only">
+<a href="./CS05.html">&larr; Prev</a>
+<a href="./index.html">Gallery</a>
+<a href="./CS07.html">Next &rarr;</a>
+</div></div>
 </body>
 </html>

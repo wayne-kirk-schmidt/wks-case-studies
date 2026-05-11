@@ -1,62 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Guru Suite Case Study Carousel</title>
-
 <style>
-/* =========================
-   BODY — REAL BACKGROUND
-========================= */
+/* === BODY === */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-
-  background-image: url("/background.png"); /* adjust path if needed */
+  background-image: url("./background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
   color: #0f2742;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* === CONTAINER === */
 .carousel-container {
-  max-width: 960px;
-  margin: 4rem auto;
+  max-width: 860px;
+  margin: 3rem auto;
   padding: 0 16px 40px;
 }
 
-/* =========================
-   CARD
-========================= */
+/* === CARD === */
 .carousel-slide {
-  display: none;
-
-  background: rgba(255, 255, 255, 0.85);
-
-  border-radius: 14px;
-  padding: 2rem;
-
-  border-left: 6px solid #244a86;
-
-  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-
-  backdrop-filter: blur(3px);
-}
-
-.carousel-slide.active {
   display: block;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  padding: 2rem;
+  border-left: 6px solid #244a86;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
 }
 
-/* =========================
-   TABLE
-========================= */
+/* === TABLE === */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -69,67 +46,33 @@ th, td {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* =========================
-   STARRY STRUCTURE (UPGRADED)
-========================= */
 th {
   width: 22%;
-
   background: rgba(36, 74, 134, 0.12);
-
   border-right: 2px solid rgba(36, 74, 134, 0.25);
-
   color: #244a86;
-
   font-weight: 800;
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
-.starry-header {
-  font-size: 0.85rem;
-}
+.starry-header { font-size: 0.85rem; }
 
 .starry-header .first-letter {
   font-size: 1.4em;
   font-weight: 900;
   color: #0f2742;
   margin-right: 4px;
+  display: inline-block;
 }
 
-/* =========================
-   LISTS
-========================= */
-ul {
-  margin-top: 0.5rem;
-  padding-left: 1.25rem;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.carousel-nav {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.carousel-nav button {
-  background-color: #244a86;
-  color: white;
-  padding: 0.6rem 1rem;
-  border: none;
-  margin: 0 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* =========================
-   OVERVIEW BUTTON
-========================= */
+/* === NAV === */
 .overview-only {
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .overview-only a {
@@ -142,29 +85,19 @@ ul {
   font-weight: bold;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* === MOBILE === */
 @media (max-width: 720px) {
-  .carousel-slide {
-    padding: 1.2rem;
-  }
-
-  th, td {
-    display: block;
-    width: 100%;
-  }
-
-  th {
-    border-bottom: none;
-    padding-bottom: 0.3rem;
-  }
-
-  td {
-    padding-top: 0.3rem;
-  }
+  .carousel-slide { padding: 1.2rem; }
+  th, td { display: block; width: 100%; }
+  th { border-bottom: none; padding-bottom: 0.3rem; }
+  td { padding-top: 0.3rem; }
 }
 </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PULSE — ChangeIS Case Study</title>
+
+
 </head>
 
 <body>
@@ -227,7 +160,9 @@ million USD annually.</td>
 <!-- Future slides go here -->
 
 <div class="overview-only">
-<a href="index.html">Overview</a>
+<a href="./CS15.html">&larr; Prev</a>
+<a href="./index.html">Gallery</a>
+<a href="./CS02.html">Next &rarr;</a>
 </div>
 
 </div>

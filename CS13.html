@@ -1,53 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CS13</title>
 <style>
+/* === BODY === */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("/background.png");
+  background-image: url("./background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #0f2742;
 }
+
+/* === CONTAINER === */
 .carousel-container {
-  max-width: 960px;
-  margin: 4rem auto;
+  max-width: 860px;
+  margin: 3rem auto;
   padding: 0 16px 40px;
 }
+
+/* === CARD === */
 .carousel-slide {
   display: block;
-  background: rgba(255,255,255,0.85);
-  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
   padding: 2rem;
   border-left: 6px solid #244a86;
   box-shadow: 0 30px 80px rgba(0,0,0,0.45);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
 }
-table { width: 100%; border-collapse: collapse; }
-th, td { text-align:left; vertical-align:top; padding:1rem; border-bottom:1px solid #e0e0e0; }
-th { width:20%; background-color:#f0f3f9; color:#1e3c72; }
-.overview-only { text-align:center; margin-top:2rem; }
-.overview-only a {
-  display:inline-block; background:#0f2742; color:#fff;
-  padding:0.7rem 1.2rem; border-radius:10px; text-decoration:none; font-weight:700;
+
+/* === TABLE === */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
-</style>
-<style>
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  width: 22%;
+  background: rgba(36, 74, 134, 0.12);
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+  color: #244a86;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.starry-header { font-size: 0.85rem; }
+
 .starry-header .first-letter {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
-  color: #000 !important;
-  display: inline-block !important;
-  margin-right: 0.05em !important;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #0f2742;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+/* === NAV === */
+.overview-only {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.overview-only a {
+  display: inline-block;
+  background: #0f2742;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === MOBILE === */
+@media (max-width: 720px) {
+  .carousel-slide { padding: 1.2rem; }
+  th, td { display: block; width: 100%; }
+  th { border-bottom: none; padding-bottom: 0.3rem; }
+  td { padding-top: 0.3rem; }
 }
 </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SWITCHBOARD — ChangeIS Case Study</title>
+
+
 </head>
 <body>
 <div class="carousel-container">
@@ -64,7 +114,11 @@ th { width:20%; background-color:#f0f3f9; color:#1e3c72; }
 <li class="li2"><span class="s3"></span><span class="s2">Enabled rapid experimentation with complex topologies and policies.</span></li>
 </ul></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td><p class="p2"><span class="s2">Faster release cycles with lower lab costs and higher engineer productivity; reduced risk from configuration mistakes in pre‑prod, reducing time to validate configurations by <b>98%</b>, from multiple weeks to hours.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td><p class="p2"><span class="s2">Turned networking into <b>infrastructure as code</b> for QA—enabling safe iteration and scale while improving product quality and speed.</span></p></td></tr></table>
 </div>
-<div class="overview-only"><a href="index.html">Overview</a></div>
+<div class="overview-only">
+<a href="./CS12.html">&larr; Prev</a>
+<a href="./index.html">Gallery</a>
+<a href="./CS14.html">Next &rarr;</a>
+</div>
 </div>
 </body>
 </html>

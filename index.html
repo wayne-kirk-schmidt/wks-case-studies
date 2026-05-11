@@ -1,374 +1,509 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Project Delivery - Case Studies</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project Delivery — Case Studies · ChangeIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --ink: #0f2742;
-    --muted: #6b7280;
-    --brand: #233b63;
-    --accent: #244a86;
-  }
-
-  * { box-sizing: border-box; }
-
-  /* =========================
-     BACKGROUND (MATCH OVERVIEW)
-  ========================= */
-  body {
-    margin: 0;
-
-    background-image: url("/background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-                 Roboto, "Helvetica Neue", Arial;
-
-    color: var(--ink);
-  }
-
-  /* =========================
-     HEADER (WHITE TEXT)
-  ========================= */
-  header { padding: 28px 22px 8px; }
-
-  h1 {
-    margin: 0 0 12px;
-    font-weight: 800;
-    letter-spacing: .2px;
-
-    color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-
-  /* =========================
-     LAYOUT
-  ========================= */
-  main { padding: 12px 22px 12px; }
-
-  .grid {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  @media (max-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-  @media (max-width: 980px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
-
-  /* =========================
-     TILE (MATCH PANEL STYLE)
-  ========================= */
-  .tile {
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 16px;
-
-    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-    backdrop-filter: blur(4px);
-
-    text-decoration: none;
-    color: inherit;
-
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-  }
-
-  .tile:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255,255,255,0.4);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.4);
-  }
-
-  .tile-inner { text-align: center; }
-
-  .tile-line1 {
-    font-size: 13px;
-    font-weight: 800;
-    color: #9ca3af;
-    letter-spacing: .8px;
-    margin-bottom: 6px;
-  }
-
-  .tile-line2 {
-    font-size: 20px;
-    font-weight: 800;
-    color: #244a86;
-    letter-spacing: .3px;
-  }
-
-  /* =========================
-     FOOTER / CONTROLS
-  ========================= */
-  footer { padding: 12px 22px 28px; }
-
-  .bottom {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 620px) 1fr;
-    gap: 12px;
-    align-items: start;
-  }
-
-  .left { justify-self: start; }
-  .center { justify-self: center; }
-  .right { justify-self: end; }
-
-  .btn {
-    background: #0f2742;
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 16px;
-    border-radius: 14px;
-    text-decoration: none;
-  }
-
-  .btn.secondary {
-    background: rgba(255,255,255,0.2);
-    color: #ffffff;
-  }
-
-  /* =========================
-     TABS (DARK MODE FIX)
-  ========================= */
-  .tabs {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .tab {
-    background: rgba(255,255,255,0.15);
-    color: #ffffff;
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-  }
-
-  .tab.active {
-    background: rgba(33,163,102,0.2);
-    outline: 2px solid #21a366;
-  }
-
-  /* =========================
-     CHIPS
-  ========================= */
-  .chips {
-    padding-top: 10px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .chip {
-    background: rgba(255,255,255,0.15);
-    color: #ffffff;
-    padding: 6px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.2);
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .chip[aria-pressed="true"] {
-    outline: 2px solid #21a366;
-    background: rgba(33,163,102,0.2);
-  }
-
-  .chip.disabled {
-    opacity: .5;
-    cursor: default;
-  }
-
-  .panel { display: none; }
-  .panel.active { display: block; }
-
+:root {
+  --ink:     #0f2742;
+  --navy:    #1a2f52;
+  --brand:   #244a86;
+  --accent:  #3b6fd4;
+  --frost:   rgba(255,255,255,0.92);
+  --frost2:  rgba(255,255,255,0.12);
+  --white:   #ffffff;
+  --muted:   rgba(255,255,255,0.65);
+  --green:   #21a366;
+  --green-bg:rgba(33,163,102,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--ink);
+}
+header {
+  padding: 2.5rem 2rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.header-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.header-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--white);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  line-height: 1.1;
+}
+.header-starry { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; letter-spacing: 0.3px; }
+.header-links { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.header-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.header-link:hover { color: var(--white); }
+.header-link.primary {
+  background: var(--brand);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.header-link.primary:hover { background: var(--accent); }
+.filter-strip { padding: 0.75rem 2rem 1rem; }
+.filter-strip-inner {
+  background: rgba(15,39,66,0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.filter-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  min-width: 90px;
+}
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  background: var(--frost2);
+  color: var(--white);
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+.chip:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.3); }
+.chip[aria-pressed="true"] {
+  background: var(--green-bg);
+  border-color: var(--green);
+  outline: 1.5px solid var(--green);
+  color: #7dffc4;
+}
+.filter-actions { display: flex; justify-content: flex-end; padding-top: 2px; }
+.clear-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--muted);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+.clear-btn:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+main { padding: 0.5rem 2rem 1rem; }
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) { .carousel-track { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .carousel-track { grid-template-columns: 1fr; } }
+.tile {
+  background: var(--frost);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-left: 5px solid var(--brand);
+  min-height: 140px;
+}
+.tile:hover { transform: translateY(-3px); box-shadow: 0 30px 70px rgba(0,0,0,0.45); }
+.tile.hidden { display: none !important; }
+.tile-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #9ca3af; }
+.tile-name { font-family: 'Inter', sans-serif; font-size: 1.5rem; color: var(--brand); line-height: 1; }
+.tile-tagline { font-size: 13px; color: #4b5563; line-height: 1.4; flex: 1; }
+.tile-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
+.tile-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--green-bg);
+  color: var(--green);
+}
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 1.25rem 0 0.5rem;
+}
+.carousel-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.carousel-btn:hover { background: rgba(255,255,255,0.25); }
+.carousel-btn:disabled { opacity: 0.3; cursor: default; }
+.carousel-info { font-size: 13px; font-weight: 600; color: var(--muted); min-width: 80px; text-align: center; }
+.no-results {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 3rem;
+  font-size: 15px;
+  grid-column: 1/-1;
+}
+footer {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-links { display: flex; gap: 16px; }
+.footer-link { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.15s; }
+.footer-link:hover { color: var(--white); }
+.footer-links { align-items: center; }
+.starry-link { font-size: 15px; color: rgba(255,255,255,0.65); font-weight: 400; }
+.starry-link:hover { color: var(--white); }
+.starry-letters { font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.85); }
+.starry-link:hover .starry-letters { color: var(--white); }
+.footer-link.primary-footer { background: var(--brand); color: var(--white); padding: 6px 14px; border-radius: 8px; font-weight: 600; }
+.footer-link.primary-footer:hover { background: var(--accent); color: var(--white); }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
 </style>
 </head>
 <body>
+
 <header>
-<h1>Project Delivery - Case Studies</h1>
+  <div>
+    <div class="header-eyebrow">ChangeIS · Wayne Kirk Schmidt</div>
+    <div class="header-title">Project Delivery Case Studies</div>
+  </div>
+  <div class="header-links">
+    <a class="header-link starry-link" href="./explanation.html">All case studies follow the <span class="starry-letters">S·T·A·R·R·Y</span> format</a>
+  </div>
 </header>
+
+<div class="filter-strip">
+  <div class="filter-strip-inner">
+    <div class="filter-row">
+      <span class="filter-label">Location</span>
+      <div class="chips">
+        <button class="chip" data-cat="locations" data-val="APAC">APAC</button>
+        <button class="chip" data-cat="locations" data-val="EU">EU</button>
+        <button class="chip" data-cat="locations" data-val="Global">Global</button>
+        <button class="chip" data-cat="locations" data-val="JP">Japan</button>
+        <button class="chip" data-cat="locations" data-val="Regional">Regional</button>
+        <button class="chip" data-cat="locations" data-val="US">US</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Industry</span>
+      <div class="chips">
+        <button class="chip" data-cat="industries" data-val="Financial">Financial</button>
+        <button class="chip" data-cat="industries" data-val="Fintech">Fintech</button>
+        <button class="chip" data-cat="industries" data-val="Food and Beverage">Food &amp; Beverage</button>
+        <button class="chip" data-cat="industries" data-val="Insurance">Insurance</button>
+        <button class="chip" data-cat="industries" data-val="MSP">MSP</button>
+        <button class="chip" data-cat="industries" data-val="MSSP">MSSP</button>
+        <button class="chip" data-cat="industries" data-val="Monitoring">Monitoring</button>
+        <button class="chip" data-cat="industries" data-val="Office and Document Solutions">Office &amp; Document</button>
+        <button class="chip" data-cat="industries" data-val="Security">Security</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Discipline</span>
+      <div class="chips">
+        <button class="chip" data-cat="capabilities" data-val="DevOps">DevOps</button>
+        <button class="chip" data-cat="capabilities" data-val="ML/AI">ML / AI</button>
+        <button class="chip" data-cat="capabilities" data-val="Security">Security</button>
+        <button class="chip" data-cat="capabilities" data-val="Automation">Automation</button>
+        <button class="chip" data-cat="capabilities" data-val="Infrastructure">Infrastructure</button>
+        <button class="chip" data-cat="capabilities" data-val="Observability">Observability</button>
+        <button class="chip" data-cat="capabilities" data-val="Compliance">Compliance</button>
+        <button class="chip" data-cat="capabilities" data-val="Platform">Platform</button>
+        <button class="chip" data-cat="capabilities" data-val="CI/CD">CI / CD</button>
+        <button class="chip" data-cat="capabilities" data-val="Network">Network</button>
+        <button class="chip" data-cat="capabilities" data-val="AI Agent">AI Agent</button>
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button class="clear-btn" id="clearBtn">Clear filters</button>
+    </div>
+  </div>
+</div>
+
 <main>
-<div class="grid">
-<a class="tile" data-capabilities="PULSE,Instrumented Timestamped All,Centralized Tooling Simplify,Ticket Creation Pipeline,Duplicate Suppression Client" data-industries="MSP,MSSP" data-locations="US" data-results="98.3% ↑" data-return="$2.14M/yr" data-yield="Dramatically Lowering Time-to-response" href="./CS01.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">PULSE</div>
-</div>
-</a>
-<a class="tile" data-capabilities="COMPASS,Rapidly Developed Capability,Evaluated Three Major" data-industries="Monitoring" data-locations="EU" data-yield="Beyond Cloud Strategy" href="./CS02.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">COMPASS</div>
-</div>
-</a>
-<a class="tile" data-capabilities="NXT RAW,Deployed Ultra-low Latency,Optimized Networking Memory,Filed Received Patent" data-industries="Financial" data-locations="APAC,JP" data-yield="Low Latency" href="./CS03.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">NXT RAW</div>
-</div>
-</a>
-<a class="tile" data-capabilities="BEACON,Started Assumption Compromised,Analyzed First Second,Detected Predictable Malicious,Lightweight Telemetry Agents,Tuned ML Models" data-industries="Security" data-locations="EU,JP,US" data-results="97%" data-yield="Automation" href="./CS04.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">BEACON</div>
-</div>
-</a>
-<a class="tile" data-capabilities="SPARROW,Implemented Containerized Build,Workflows Github Actions,Test Coverage Reports,Deployment Testing Ranged,Building QA Ready" data-industries="Fintech" data-locations="JP" data-results="98%,93%" data-yield="Engagement Demonstrated How" href="./CS05.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">SPARROW</div>
-</div>
-</a>
-<a class="tile" data-capabilities="HAVEN,Audited Systems Implemented,Virtualized Environment Testing,Streamlined Installs Added" data-industries="Food and Beverage" data-locations="JP" data-results="99.7% ↑,3×" data-return="$4M/yr,900h/yr" data-yield="Strategic Flexibility Long-term" href="./CS06.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">HAVEN</div>
-</div>
-</a>
-<a class="tile" data-capabilities="ARK,Conceived Architected ARK,Impact Calculators Simulate,Integrated ARK Global,Drove Adoption Programs" data-industries="Financial" data-locations="Global" data-results="97% ↓,17×" data-return="$9M/yr,$17M/yr" data-yield="Lower Risk,Faster Delivery" href="./CS07.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">ARK</div>
-</div>
-</a>
-<a class="tile" data-capabilities="BRAVO,Architected BRAVO Data,Integrated CI CD,Dashboards Engineering QA" data-industries="Security" data-locations="Global" data-results="d→h" data-return="$1.8M/yr" data-yield="Analytics" href="./CS08.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">BRAVO</div>
-</div>
-</a>
-<a class="tile" data-capabilities="DISPATCH,Organized Help Desk,Classification Routing Rules,Delivered Training Process,Enhanced Ticketing System,Stood UP Continuous" data-industries="Insurance" data-locations="APAC,JP" data-results="45% ↓" data-return="$2.36M/yr" data-yield="Proactive,Standardized,Automation" href="./CS09.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">DISPATCH</div>
-</div>
-</a>
-<a class="tile" data-capabilities="LEDGER,Distributed Discovery Engine,Applied Machine Learning,Integrated License Configuration,Delivered Dashboards Reports" data-industries="Insurance" data-locations="APAC,JP" data-results="75%,99.92%,8weeks→2h" data-return="$69M/yr" data-yield="Automation,Compliance,Lower Risk" href="./CS10.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">LEDGER</div>
-</div>
-</a>
-<a class="tile" data-capabilities="AEGIS,AEGIS Actions Settings,Scripts Methods Harden,Enforcement Toolkit Policy,Declarative Baselines Automated,Exposed Central CLI" data-industries="Financial" data-locations="Global" data-results="weeks→hforcommontasks" data-yield="Established Sustainable Code" href="./CS11.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">AEGIS</div>
-</div>
-</a>
-<a class="tile" data-capabilities="FLEET,Architected Distributed Software,Rollback State Comparison,Inventory Compliance Checks,Scheduled Maintenance Windows" data-industries="Office and Document Solutions" data-locations="US" data-yield="Demonstrated Manage Anywhere" href="./CS12.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">FLEET</div>
-</div>
-</a>
-<a class="tile" data-capabilities="SWITCHBOARD,Offerings Including Physical,Defined Topology Templates,Push Rollback Lab,Integrated Scripts Provision,Added Traffic Generation" data-industries="Financial" data-locations="Global" data-results="d→m" data-yield="IaC,Faster Delivery" href="./CS13.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">SWITCHBOARD</div>
-</div>
-</a>
-<a class="tile" data-capabilities="TRACE,Formalized End End,Templates Intake Forms,Generative AI Agent,Grade Reports Against,Draft New Reports" data-industries="Financial" data-locations="Regional" data-yield="Automation,Agent,PIM" href="./CS14.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">TRACE</div>
-</div>
-</a>
-<a class="tile" data-capabilities="MAESTRO,MAESTRO Machine Learning,Builds Testing Playbooks,MAESTRO Prioritizes Scenarios,Improve Coverage Efficiency" data-industries="Financial" data-locations="Global" data-results="17% ↑,2% ↑,12d→3h,6h→10m,3×,MTTR 6h" data-return="$2.75M/yr" data-yield="Automation,Confidence,Faster Delivery" href="./CS15.html">
-<div class="tile-inner">
-<div class="tile-line1">Case Study</div>
-<div class="tile-line2">MAESTRO</div>
-</div>
-</a>
-</div>
+  <div class="carousel-track" id="carouselTrack">
+
+    <a class="tile" href="./CS01.html" data-locations="US" data-industries="MSP,MSSP" data-capabilities="Automation,Observability,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">PULSE</div>
+      <div class="tile-tagline">Incident response from 20 minutes to 10 seconds</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS02.html" data-locations="EU" data-industries="Monitoring" data-capabilities="Platform,Infrastructure,DevOps,CI/CD">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">COMPASS</div>
+      <div class="tile-tagline">Cloud vision, impact, and roadmap. Delivered in weeks, not months.</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS03.html" data-locations="APAC,JP" data-industries="Financial" data-capabilities="Infrastructure,Platform,ML/AI">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">NXT RAW</div>
+      <div class="tile-tagline">¼µs market data platform generating $14M+ in APAC revenue</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS04.html" data-locations="EU,JP,US" data-industries="Security" data-capabilities="Security,ML/AI,Automation">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">BEACON</div>
+      <div class="tile-tagline">ML-driven compromise detection reducing identification time by 97%</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS05.html" data-locations="JP" data-industries="Fintech" data-capabilities="CI/CD,DevOps,Automation,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">SPARROW</div>
+      <div class="tile-tagline">Fintech CI/CD built for speed, coverage, and confidence</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS06.html" data-locations="JP" data-industries="Food and Beverage" data-capabilities="Infrastructure,Platform,Automation">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">ANCHOR</div>
+      <div class="tile-tagline">Order management platform rebuilt from legacy to 99.99% uptime</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS07.html" data-locations="Global" data-industries="Financial" data-capabilities="ML/AI,Automation,Infrastructure,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">ARK</div>
+      <div class="tile-tagline">Dependency discovery at scale, from days to minutes</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS08.html" data-locations="Global" data-industries="Security" data-capabilities="ML/AI,Automation,CI/CD">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">BRAVO</div>
+      <div class="tile-tagline">Automated manual test cycles at scale from weeks to hours</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS09.html" data-locations="APAC,JP" data-industries="Insurance" data-capabilities="Automation,Platform,Observability">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">DISPATCH</div>
+      <div class="tile-tagline">Multi-language, multi-site help desk transformation across APAC</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS10.html" data-locations="APAC,JP" data-industries="Insurance" data-capabilities="ML/AI,Automation,Compliance,Infrastructure">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">LEDGER</div>
+      <div class="tile-tagline">ML-driven asset discovery for top tier insurance firm</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS11.html" data-locations="Global" data-industries="Financial" data-capabilities="Security,Automation,Compliance,Infrastructure,Network">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">AEGIS</div>
+      <div class="tile-tagline">Perimeter security automation across 80 global sites from weeks to hours</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS12.html" data-locations="US" data-industries="Office and Document Solutions" data-capabilities="Infrastructure,Automation,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">FLEET</div>
+      <div class="tile-tagline">Distributed software management across 1,000+ remote endpoints</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS13.html" data-locations="Global" data-industries="Financial" data-capabilities="Network,Infrastructure,Automation,DevOps">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">SWITCHBOARD</div>
+      <div class="tile-tagline">Network lab automation cutting provisioning from days to minutes</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS14.html" data-locations="Regional" data-industries="Financial" data-capabilities="AI Agent,Automation,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">TRACE</div>
+      <div class="tile-tagline">AI agent assisted post mortem process reducing time from weeks to hours</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <a class="tile" href="./CS15.html" data-locations="Global" data-industries="Financial" data-capabilities="ML/AI,Automation,CI/CD,Platform">
+      <div class="tile-eyebrow">Case Study</div>
+      <div class="tile-name">MAESTRO</div>
+      <div class="tile-tagline">ML driven testing orchestration cutting multi day cycles to hours</div>
+      <div class="tile-tags"></div>
+    </a>
+
+    <div class="no-results" id="noResults">No case studies match the selected filters.</div>
+
+  </div>
+
+  <div class="carousel-controls" id="carouselControls">
+    <button class="carousel-btn" id="prevBtn">&#8592;</button>
+    <span class="carousel-info" id="carouselInfo"></span>
+    <button class="carousel-btn" id="nextBtn">&#8594;</button>
+  </div>
 </main>
+
 <footer>
-<div class="bottom">
-<div class="left">
-<a class="btn" href="./overview.html">Overview</a>
-</div>
-<div class="center">
-<div class="tabs">
-<button class="tab active" data-tab="locations">Locations</button>
-<button class="tab" data-tab="industries">Industries</button>
-<button class="tab" data-tab="capabilities">Capabilities</button>
-<button class="tab" data-tab="results">Results</button><button class="tab" data-tab="return">Return</button><button class="tab" data-tab="yield">Yield</button></div>
-<div class="panel active" id="panel-locations">
-<div class="chips"><button class="chip" data-cat="locations" data-val="APAC">APAC</button> <button class="chip" data-cat="locations" data-val="EU">EU</button> <button class="chip" data-cat="locations" data-val="Global">Global</button> <button class="chip" data-cat="locations" data-val="JP">JP</button> <button class="chip" data-cat="locations" data-val="Regional">Regional</button> <button class="chip" data-cat="locations" data-val="US">US</button></div>
-</div>
-<div class="panel" id="panel-industries">
-<div class="chips"><button class="chip" data-cat="industries" data-val="Financial">Financial</button> <button class="chip" data-cat="industries" data-val="Fintech">Fintech</button> <button class="chip" data-cat="industries" data-val="Food and Beverage">Food and Beverage</button> <button class="chip" data-cat="industries" data-val="Insurance">Insurance</button> <button class="chip" data-cat="industries" data-val="MSP">MSP</button> <button class="chip" data-cat="industries" data-val="MSSP">MSSP</button> <button class="chip" data-cat="industries" data-val="Monitoring">Monitoring</button> <button class="chip" data-cat="industries" data-val="Office and Document Solutions">Office and Document Solutions</button> <button class="chip" data-cat="industries" data-val="Security">Security</button></div>
-</div>
-<div class="panel" id="panel-capabilities">
-<div class="chips"><span class="chip disabled">None</span><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="AEGIS">AEGIS</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="AEGIS Actions Settings">AEGIS Actions Settings</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="ARK">ARK</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Added Traffic Generation">Added Traffic Generation</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Analyzed First Second">Analyzed First Second</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Applied Machine Learning">Applied Machine Learning</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Architected BRAVO Data">Architected BRAVO Data</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Architected Distributed Software">Architected Distributed Software</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Audited Systems Implemented">Audited Systems Implemented</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="BEACON">BEACON</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="BRAVO">BRAVO</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Building QA Ready">Building QA Ready</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Builds Testing Playbooks">Builds Testing Playbooks</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="COMPASS">COMPASS</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Centralized Tooling Simplify">Centralized Tooling Simplify</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Classification Routing Rules">Classification Routing Rules</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Conceived Architected ARK">Conceived Architected ARK</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="DISPATCH">DISPATCH</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Dashboards Engineering QA">Dashboards Engineering QA</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Declarative Baselines Automated">Declarative Baselines Automated</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Defined Topology Templates">Defined Topology Templates</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Delivered Dashboards Reports">Delivered Dashboards Reports</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Delivered Training Process">Delivered Training Process</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Deployed Ultra-low Latency">Deployed Ultra-low Latency</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Deployment Testing Ranged">Deployment Testing Ranged</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Detected Predictable Malicious">Detected Predictable Malicious</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Distributed Discovery Engine">Distributed Discovery Engine</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Draft New Reports">Draft New Reports</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Drove Adoption Programs">Drove Adoption Programs</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Duplicate Suppression Client">Duplicate Suppression Client</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Enforcement Toolkit Policy">Enforcement Toolkit Policy</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Enhanced Ticketing System">Enhanced Ticketing System</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Evaluated Three Major">Evaluated Three Major</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Exposed Central CLI">Exposed Central CLI</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="FLEET">FLEET</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Filed Received Patent">Filed Received Patent</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Formalized End End">Formalized End End</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Generative AI Agent">Generative AI Agent</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Grade Reports Against">Grade Reports Against</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="HAVEN">HAVEN</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Impact Calculators Simulate">Impact Calculators Simulate</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Implemented Containerized Build">Implemented Containerized Build</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Improve Coverage Efficiency">Improve Coverage Efficiency</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Instrumented Timestamped All">Instrumented Timestamped All</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Integrated ARK Global">Integrated ARK Global</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Integrated CI CD">Integrated CI CD</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Integrated License Configuration">Integrated License Configuration</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Integrated Scripts Provision">Integrated Scripts Provision</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Inventory Compliance Checks">Inventory Compliance Checks</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="LEDGER">LEDGER</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Lightweight Telemetry Agents">Lightweight Telemetry Agents</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="MAESTRO">MAESTRO</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="MAESTRO Machine Learning">MAESTRO Machine Learning</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="MAESTRO Prioritizes Scenarios">MAESTRO Prioritizes Scenarios</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="NXT RAW">NXT RAW</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Offerings Including Physical">Offerings Including Physical</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Optimized Networking Memory">Optimized Networking Memory</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Organized Help Desk">Organized Help Desk</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="PULSE">PULSE</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Push Rollback Lab">Push Rollback Lab</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Rapidly Developed Capability">Rapidly Developed Capability</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Rollback State Comparison">Rollback State Comparison</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="SPARROW">SPARROW</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="SWITCHBOARD">SWITCHBOARD</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Scheduled Maintenance Windows">Scheduled Maintenance Windows</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Scripts Methods Harden">Scripts Methods Harden</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Started Assumption Compromised">Started Assumption Compromised</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Stood UP Continuous">Stood UP Continuous</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Streamlined Installs Added">Streamlined Installs Added</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="TRACE">TRACE</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Templates Intake Forms">Templates Intake Forms</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Test Coverage Reports">Test Coverage Reports</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Ticket Creation Pipeline">Ticket Creation Pipeline</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Tuned ML Models">Tuned ML Models</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Virtualized Environment Testing">Virtualized Environment Testing</button><button aria-pressed="false" class="chip" data-cat="capabilities" data-val="Workflows Github Actions">Workflows Github Actions</button></div>
-</div><div class="panel" id="panel-results"><div class="chips"><button aria-pressed="false" class="chip" data-cat="results" data-val="12d→3h">12d→3h</button><button aria-pressed="false" class="chip" data-cat="results" data-val="17% ↑">17% ↑</button><button aria-pressed="false" class="chip" data-cat="results" data-val="17×">17×</button><button aria-pressed="false" class="chip" data-cat="results" data-val="2% ↑">2% ↑</button><button aria-pressed="false" class="chip" data-cat="results" data-val="3×">3×</button><button aria-pressed="false" class="chip" data-cat="results" data-val="45% ↓">45% ↓</button><button aria-pressed="false" class="chip" data-cat="results" data-val="6h→10m">6h→10m</button><button aria-pressed="false" class="chip" data-cat="results" data-val="75%">75%</button><button aria-pressed="false" class="chip" data-cat="results" data-val="8weeks→2h">8weeks→2h</button><button aria-pressed="false" class="chip" data-cat="results" data-val="93%">93%</button><button aria-pressed="false" class="chip" data-cat="results" data-val="97%">97%</button><button aria-pressed="false" class="chip" data-cat="results" data-val="97% ↓">97% ↓</button><button aria-pressed="false" class="chip" data-cat="results" data-val="98%">98%</button><button aria-pressed="false" class="chip" data-cat="results" data-val="98.3% ↑">98.3% ↑</button><button aria-pressed="false" class="chip" data-cat="results" data-val="99.7% ↑">99.7% ↑</button><button aria-pressed="false" class="chip" data-cat="results" data-val="99.92%">99.92%</button><button aria-pressed="false" class="chip" data-cat="results" data-val="MTTR 6h">MTTR 6h</button><button aria-pressed="false" class="chip" data-cat="results" data-val="d→h">d→h</button><button aria-pressed="false" class="chip" data-cat="results" data-val="d→m">d→m</button><button aria-pressed="false" class="chip" data-cat="results" data-val="weeks→hforcommontasks">weeks→hforcommontasks</button></div></div><div class="panel" id="panel-return"><div class="chips"><button aria-pressed="false" class="chip" data-cat="return" data-val="$1.8M/yr">$1.8M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$17M/yr">$17M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$2.14M/yr">$2.14M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$2.36M/yr">$2.36M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$2.75M/yr">$2.75M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$4M/yr">$4M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$69M/yr">$69M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="$9M/yr">$9M/yr</button><button aria-pressed="false" class="chip" data-cat="return" data-val="900h/yr">900h/yr</button></div></div><div class="panel" id="panel-yield"><div class="chips"><button aria-pressed="false" class="chip" data-cat="yield" data-val="Agent">Agent</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Analytics">Analytics</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Automation">Automation</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Beyond Cloud Strategy">Beyond Cloud Strategy</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Compliance">Compliance</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Confidence">Confidence</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Demonstrated Manage Anywhere">Demonstrated Manage Anywhere</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Dramatically Lowering Time-to-response">Dramatically Lowering Time-to-response</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Engagement Demonstrated How">Engagement Demonstrated How</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Established Sustainable Code">Established Sustainable Code</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Faster Delivery">Faster Delivery</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="IaC">IaC</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Low Latency">Low Latency</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Lower Risk">Lower Risk</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="PIM">PIM</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Proactive">Proactive</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Standardized">Standardized</button><button aria-pressed="false" class="chip" data-cat="yield" data-val="Strategic Flexibility Long-term">Strategic Flexibility Long-term</button></div></div>
-</div>
-<div class="right">
-<a class="btn secondary" href="#" id="clearBtn" onclick="return false;">Clear filters</a>
-</div>
-</div>
+  <div class="footer-links">
+    <a class="footer-link" href="https://www.waynekirkschmidt.me">Wayne Kirk Schmidt</a>
+    <a class="footer-link" href="https://changeis.io">ChangeIS</a>
+    <a class="footer-link" href="https://changeis.io/#contact">Engage &rarr;</a>
+  </div>
+  <div class="footer-copy">ChangeIS &copy; 2026 &middot; Boston &middot; Tokyo &middot; Global</div>
 </footer>
+
 <script>
-function activate(name) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('panel-' + name).classList.add('active');
+const PAGE_SIZE = 3;
+let currentPage = 0;
+const active = { locations: new Set(), industries: new Set(), capabilities: new Set() };
+
+function getTiles() {
+  return Array.from(document.querySelectorAll('.tile:not(.no-results)'));
 }
-document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => activate(t.dataset.tab)));
 
-const active = { locations: new Set(), industries: new Set(), capabilities: new Set(), results: new Set(), return: new Set(), yield: new Set() };
-
-function applyFilters() {
-  const tiles = document.querySelectorAll('.tile');
-  tiles.forEach(tile => {
-    let visible = true;
+function getVisible() {
+  return getTiles().filter(tile => {
     for (const cat of Object.keys(active)) {
       const needed = active[cat];
       if (needed.size === 0) continue;
-      const vals = (tile.dataset[cat] || '').split(',').map(s => s.trim()).filter(Boolean);
-      let match = false;
-      for (const v of needed) { if (vals.includes(v)) { match = true; break; } }
-      if (!match) { visible = false; break; }
+      const vals = (tile.dataset[cat] || '').split(',').map(s => s.trim());
+      if (![...needed].some(v => vals.includes(v))) return false;
     }
-    tile.style.display = visible ? '' : 'none';
+    return true;
   });
 }
 
-function resetFilters() {
-  for (const cat of Object.keys(active)) active[cat].clear();
-  document.querySelectorAll('.chip').forEach(ch => ch.setAttribute('aria-pressed','false'));
-  applyFilters();
+function applyFilters() {
+  const visible = getVisible();
+  getTiles().forEach(t => t.classList.add('hidden'));
+  visible.forEach(t => t.classList.remove('hidden'));
+  document.getElementById('noResults').style.display = visible.length === 0 ? 'block' : 'none';
+
+  // Show active filter tags on matching tiles
+  getTiles().forEach(tile => {
+    const tagsEl = tile.querySelector('.tile-tags');
+    tagsEl.innerHTML = '';
+    for (const cat of Object.keys(active)) {
+      const needed = active[cat];
+      if (needed.size === 0) continue;
+      const vals = (tile.dataset[cat] || '').split(',').map(s => s.trim());
+      needed.forEach(v => {
+        if (vals.includes(v)) {
+          const span = document.createElement('span');
+          span.className = 'tile-tag';
+          span.textContent = v === 'JP' ? 'Japan' : v;
+          tagsEl.appendChild(span);
+        }
+      });
+    }
+  });
+
+  currentPage = 0;
+  renderPage(visible);
+}
+
+function renderPage(visible) {
+  const total = visible.length;
+  const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  if (currentPage >= pages) currentPage = pages - 1;
+
+  visible.forEach((t, i) => {
+    t.classList.toggle('hidden', i < currentPage * PAGE_SIZE || i >= (currentPage + 1) * PAGE_SIZE);
+  });
+
+  const controls = document.getElementById('carouselControls');
+  controls.style.display = total <= PAGE_SIZE ? 'none' : 'flex';
+
+  if (total > 0) {
+    const start = currentPage * PAGE_SIZE + 1;
+    const end = Math.min((currentPage + 1) * PAGE_SIZE, total);
+    document.getElementById('carouselInfo').textContent = start + '–' + end + ' of ' + total;
+  }
+
+  document.getElementById('prevBtn').disabled = currentPage === 0;
+  document.getElementById('nextBtn').disabled = currentPage >= pages - 1;
 }
 
 document.body.addEventListener('click', function(e) {
-  const t = e.target;
-  if (t && t.classList.contains('chip')) {
-    const cat = t.dataset.cat;
-    const val = t.dataset.val;
-    const pressed = t.getAttribute('aria-pressed') === 'true';
-    t.setAttribute('aria-pressed', pressed ? 'false' : 'true');
-    if (pressed) active[cat].delete(val); else active[cat].add(val);
-    applyFilters();
-  }
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  const cat = chip.dataset.cat;
+  const val = chip.dataset.val;
+  if (!cat || !val) return;
+  const pressed = chip.getAttribute('aria-pressed') === 'true';
+  chip.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+  if (pressed) active[cat].delete(val); else active[cat].add(val);
+  applyFilters();
 });
 
-document.getElementById('clearBtn').addEventListener('click', resetFilters);
+document.getElementById('clearBtn').addEventListener('click', () => {
+  for (const cat of Object.keys(active)) active[cat].clear();
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
+  applyFilters();
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if (currentPage > 0) { currentPage--; renderPage(getVisible()); }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  const visible = getVisible();
+  if (currentPage < Math.ceil(visible.length / PAGE_SIZE) - 1) { currentPage++; renderPage(visible); }
+});
+
+applyFilters();
 </script>
 </body>
 </html>
