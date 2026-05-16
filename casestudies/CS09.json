@@ -2,15 +2,24 @@
   "id": "CS09",
   "name": "DISPATCH",
   "tagline": "Multi-language, multi-site help desk transformation across APAC",
-  "location": ["APAC", "Japan"],
-  "industry": ["Insurance"],
-  "discipline": ["Automation", "Platform", "Observability"],
+  "location": [
+    "APAC",
+    "Japan"
+  ],
+  "industry": [
+    "Insurance"
+  ],
+  "discipline": [
+    "Automation",
+    "Platform",
+    "Observability"
+  ],
   "starry": {
-    "situation": "A top-tier insurance company operated across 23 APAC locations. Language gaps between business users and SMEs, plus inconsistent intake, drove slow response: tickets typically waited 25-40 minutes before reaching the right team.",
-    "task": "Establish a standardized catch-and-dispatch front door, leveraging monitoring and ticketing systems to capture issues in the user's language, triage quickly, and route to the correct SMEs in minutes with clear ownership and auditable handoffs.",
-    "action": "Designed a language-aware intake layer integrated with existing monitoring and ticketing platforms. Implemented automated triage rules and routing logic based on issue type, severity, and location. Built audit trails and handoff notifications to ensure accountability across the 23-site estate.",
-    "result": "Ticket routing time reduced from 25-40 minutes to under 3 minutes. Handoff accuracy improved significantly. Escalations and misroutes dropped measurably across the network.",
-    "return": "Material operations savings from faster restoration times and lower triage toil. Estimated impact of $2.362M USD.",
-    "yield": "The catch-and-dispatch layer transformed incident handling from reactive queue-watching to proactive service delivery. Standardization, language-aware intake, and automated routing created a repeatable operating model that scales with geography and demand."
+    "situation": "<p class=\"p2\"><span class=\"s2\">A <b>Top‑Tier Insurance Company</b> operated across <b>23 APAC locations</b>. Language gaps between business users and SMEs, plus inconsistent intake, drove slow response: tickets typically waited <b>25–40 minutes</b> before reaching the right team.</span></p>",
+    "task": "<p class=\"p2\"><span class=\"s2\">Establish a standardized <b>catch‑and‑dispatch</b> front door, leveraging the monitoring and ticketing systems to capture issues in the user’s language, triage requirements quickly, and route to the correct SMEs in minutes with clear ownership and auditable handoffs.</span></p>",
+    "action": "<ul class=\"ul1\">\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Organized a <b>Help Desk intake</b> function to capture essential details via <b>questionnaire‑driven prompts</b> across email and phone—in the user’s language.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Implemented <b>classification & routing</b> rules mapping symptoms </span><span class=\"s4\">→</span><span class=\"s2\"> services </span><span class=\"s4\">→</span><span class=\"s2\"> owning teams, with SLO‑aware priority.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Delivered <b>training, process, and procedure</b> documents; aligned regional teams on a common operating model.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Enhanced the ticketing system with <b>tooling and data enrichment</b> (CI lookups, recent changes, related incidents, runbooks).</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Stood up a <b>continuous‑improvement loop</b> using monitoring & alerting: when new issue patterns emerged, created detectors and automated routing for those types.</span></li>\n</ul>",
+    "result": "<ul class=\"ul1\">\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Reduced time from report </span><span class=\"s4\">→</span><span class=\"s2\"> SME engagement to <b>2–5 minutes</b> (from 25–40 minutes).</span></li>\n<li class=\"li2\"><span class=\"s3\"><b></b></span><span class=\"s2\"><b>~45% effort reduction</b> across intake and triage through better data capture and auto‑routing.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Higher first‑contact resolution and improved SLA attainment across <b>23 APAC regions</b>.</span></li>\n</ul>",
+    "return": "<p class=\"p2\"><span class=\"s2\">Material Operations savings from faster times for restoration and lower triage toil; fewer escalations and handoff delays; measurable uplift in customer satisfaction through language‑appropriate intake and faster outcomes, estimated at <b>$2.362</b> <b>M USD.</b><b></b></span></p>",
+    "yield": "<p class=\"p2\"><span class=\"s2\">The <b>catch‑and‑dispatch</b> layer transformed incident handling from reactive queue‑watching to proactive service delivery. Standardization, language‑aware intake, and automated routing created a repeatable operating model that scales with geography and demand—and keeps improving via monitoring‑driven feedback.</span></p>"
   }
 }

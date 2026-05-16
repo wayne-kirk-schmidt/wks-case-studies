@@ -2,15 +2,24 @@
   "id": "CS07",
   "name": "ARK",
   "tagline": "Dependency discovery at scale, from days to minutes",
-  "location": ["Global"],
-  "industry": ["Financial"],
-  "discipline": ["ML/AI", "Automation", "Infrastructure", "Platform"],
+  "location": [
+    "Global"
+  ],
+  "industry": [
+    "Financial"
+  ],
+  "discipline": [
+    "ML/AI",
+    "Automation",
+    "Infrastructure",
+    "Platform"
+  ],
   "starry": {
-    "situation": "A Fortune 100 investment bank managed a global estate of 60,000+ hosts. Traditional deployment and migration efforts were risky and slow; hidden dependencies caused cascading failures. The institution needed a safe way to modernize without jeopardizing trading operations.",
+    "situation": "A <strong>Fortune 100 investment bank</strong> managed a global estate of 60,000+ hosts. Traditional deployment and migration efforts were risky and slow; hidden dependencies caused cascading failures. The institution needed a safe way to modernize without jeopardizing trading operations.",
     "task": "Design and implement a platform to map, analyze, and manage complex dependencies at scale, reducing operational risk while enabling large migration and consolidation projects.",
-    "action": "Conceived and architected the ARK platform using population-based incremental learning for continuous dependency analysis. Built automated impact calculators to simulate migration and upgrade scenarios before deployment. Integrated ARK into global change workflows to provide real-time risk assessment and decision support. Drove adoption across programs for planned upgrades and emergency remediation.",
-    "result": "97% reduction in deployment and migration risk. Safely orchestrated migrations of up to 4,000 hosts at a time across a 60,000+ system estate. 17x operational efficiency improvement versus prior methods.",
-    "return": "Estimated project value: $9M. Realized ROI: $17M via avoided failures, reduced downtime, and accelerated migrations.",
-    "yield": "ARK enabled safe, large-scale modernization without exposing trading systems to catastrophic risk. It became a cornerstone capability demonstrating how AI/ML-inspired dependency modeling can deliver safety, speed, and scale simultaneously."
+    "action": "<ul><li>Conceived and architected the <strong>ARK</strong> platform using population‑based incremental learning for continuous dependency analysis.</li><li>Built automated impact calculators to simulate migration and upgrade scenarios before deployment.</li><li>Integrated ARK into global change workflows to provide real‑time risk assessment and decision support.</li><li>Drove adoption across programs for planned upgrades and emergency remediation.</li></ul>",
+    "result": "<ul><li><strong>97% reduction</strong> in deployment/migration risk.</li><li>Safely orchestrated migrations of up to <strong>4,000 hosts at a time</strong> across a 60,000+ system estate.</li><li><strong>17×</strong> operational efficiency improvement versus prior methods.</li></ul>",
+    "return": "Estimated project value: <strong>$9M</strong>. Realized ROI: <strong>$17M</strong> via avoided failures, reduced downtime, and accelerated migrations.",
+    "yield": "ARK enabled safe, large‑scale modernization without exposing trading systems to catastrophic risk. It became a cornerstone capability demonstrating how AI/ML‑inspired dependency modeling can deliver <strong>safety</strong>, <strong>speed</strong>, and <strong>scale</strong> simultaneously—reinforcing leadership in adaptive orchestration."
   }
 }

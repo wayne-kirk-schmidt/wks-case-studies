@@ -2,15 +2,25 @@
   "id": "CS10",
   "name": "LEDGER",
   "tagline": "ML-driven asset discovery for top tier insurance firm",
-  "location": ["APAC", "Japan"],
-  "industry": ["Insurance"],
-  "discipline": ["ML/AI", "Automation", "Compliance", "Infrastructure"],
+  "location": [
+    "APAC",
+    "Japan"
+  ],
+  "industry": [
+    "Insurance"
+  ],
+  "discipline": [
+    "ML/AI",
+    "Automation",
+    "Compliance",
+    "Infrastructure"
+  ],
   "starry": {
-    "situation": "A top-tier insurance company struggled to manage its $69M technology fleet. Manual plant surveys took 7-9 weeks and delivered inconsistent results — approximately 75% accuracy — delaying support and weakening compliance and license governance.",
-    "task": "Replace manual surveys with an automated, ML-based spidering inventory engine that continuously discovers, validates, and reports on assets with high confidence at enterprise scale.",
-    "action": "Designed and deployed an ML-driven asset discovery platform that continuously crawled the environment, validated findings against authoritative sources, and reconciled discrepancies automatically. Built reporting dashboards for compliance, license management, and capacity planning teams.",
-    "result": "Asset inventory accuracy improved to 99.9%. Survey cycle reduced from 7-9 weeks to near real-time. Reporting lag reduced by 99.93%.",
-    "return": "Significant reduction in compliance risk and license overspend. Operational savings from eliminating manual survey cycles across a $69M fleet.",
-    "yield": "Transformed asset management from a reactive, manual burden into a real-time strategic capability — strengthening compliance, reducing operational risk, and demonstrating the tangible value of automation and ML in IT operations."
+    "situation": "A <strong>Top‑Tier Insurance Company</strong> struggled to manage its <strong>$69M</strong> technology fleet. Manual plant surveys took <strong>7–9 weeks</strong> and delivered inconsistent results (≈<strong>75%</strong> accuracy), delaying support and weakening compliance and license governance.",
+    "task": "Replace manual surveys with an automated, <strong>ML‑based “spidering” inventory engine</strong> that continuously discovers, validates, and reports on assets with high confidence at enterprise scale.",
+    "action": "<ul>\n<li>Designed a <strong>distributed discovery engine</strong> to automatically crawl infrastructure and endpoints.</li>\n<li>Applied <strong>machine learning</strong> to normalize asset signatures, remove duplicates, and flag anomalies.</li>\n<li>Integrated <strong>license and configuration</strong> collection into the same pipeline for unified compliance and support data.</li>\n<li>Delivered <strong>dashboards & reports</strong> for IT, Finance, and Compliance to act on in near real‑time.</li>\n</ul>",
+    "result": "<ul>\n<li>Cut survey cycle time from <strong>~8 weeks to 2 hours</strong>.</li>\n<li>Improved asset accuracy from <strong>~75% to 99.92%</strong>.</li>\n<li>Enabled proactive license tracking, compliance validation, and smoother support handoffs.</li>\n</ul>",
+    "return": "<ul>\n<li>Brought the <strong>$69M fleet</strong> under precise, auditable management.</li>\n<li>Freed thousands of staff‑hours per survey cycle; reduced audit and licensing risk.</li>\n<li>Improved financial control and optimized vendor spend through accurate entitlement data.</li>\n</ul>",
+    "yield": "Transformed asset management from a reactive, manual burden into a <strong>real‑time strategic capability</strong>—strengthening compliance, reducing operational risk, and demonstrating the tangible value of <strong>automation + ML</strong> in IT operations."
   }
 }

@@ -2,15 +2,24 @@
   "id": "CS05",
   "name": "SPARROW",
   "tagline": "Fintech CI/CD built for speed, coverage, and confidence",
-  "location": ["Japan"],
-  "industry": ["Fintech"],
-  "discipline": ["CI/CD", "DevOps", "Automation", "Platform"],
+  "location": [
+    "Japan"
+  ],
+  "industry": [
+    "Fintech"
+  ],
+  "discipline": [
+    "CI/CD",
+    "DevOps",
+    "Automation",
+    "Platform"
+  ],
   "starry": {
-    "situation": "A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. Build times exceeded 45 minutes, delaying releases and frustrating engineers.",
-    "task": "The goal was to streamline the CI/CD process to achieve sub-15-minute builds, improve test coverage, and increase deployment confidence.",
-    "action": "We implemented a containerized build system using Docker and introduced parallelized test execution. Pipeline stages were restructured to eliminate sequential bottlenecks, and caching strategies were applied across dependencies and artifacts.",
-    "result": "Build times dropped to an average of 11 minutes. Test coverage increased and deployment failures decreased significantly.",
-    "return": "The team recouped over 55 engineering hours per week, enabling more focus on feature development.",
-    "yield": "This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns — and how CI/CD maturity directly accelerates business velocity."
+    "situation": "A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. \nBuild times had grown to over <strong>4 hours</strong>, and deployments frequently failed \ndue to inconsistent environments and manual QA steps.",
+    "task": "The goal was to streamline the CI/CD process to achieve <strong>sub-15-minute</strong> builds, \nimprove deployment success to excess of <strong>95%</strong>, reducing reliance on manual QA \nby automating at least <strong>80%</strong> of regression tests.",
+    "action": "We implemented a containerized build system using Docker and introduced parallelized \nworkflows in GitHub Actions. Test coverage reports were integrated directly into pull requests. \nDeployment testing ranged from backend to frontend, based on the code committed. \nBy building QA and Ready for Business tests together, we streamlined the ability to report on health.",
+    "result": "Build times dropped to an average of <strong>11 minutes</strong>. \nDeployment failures were reduced significantly, and deployment success was raised to <strong>98%</strong>, \nand a full <strong>93%</strong> of regression test coverage was achieved through automation.",
+    "return": "The team recouped over <strong>55 engineering hours per week</strong>, enabling more focus on feature development. \nReleases shifted from biweekly to weekly, allowing faster time-to-market.",
+    "yield": "This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns. \nThe company now uses the new workflow as a standard across all engineering teams."
   }
 }

@@ -2,15 +2,24 @@
   "id": "CS13",
   "name": "SWITCHBOARD",
   "tagline": "Network lab automation cutting provisioning from days to minutes",
-  "location": ["Global"],
-  "industry": ["Financial"],
-  "discipline": ["Network", "Infrastructure", "Automation", "DevOps"],
+  "location": [
+    "Global"
+  ],
+  "industry": [
+    "Financial"
+  ],
+  "discipline": [
+    "Network",
+    "Infrastructure",
+    "Automation",
+    "DevOps"
+  ],
   "starry": {
-    "situation": "A security QA and engineering department needed to stand up, modify, and tear down complex network configurations for global rollout — but manual reconfiguration was slow, error-prone, and blocked release velocity.",
-    "task": "Design and create SWITCHBOARD, a system to dynamically build and rebuild network configurations for test environments — safe, fast, and repeatable.",
-    "action": "Architected a configuration-as-code framework for network lab environments. Built templated provisioning workflows that could spin up, modify, and tear down full network topologies on demand. Integrated with the QA release pipeline to trigger lab builds automatically.",
-    "result": "Provisioning time reduced by 98%, from multiple weeks to hours. Configuration errors in pre-production eliminated. Release velocity increased significantly.",
-    "return": "Faster release cycles with lower lab costs and higher engineer productivity. Reduced risk from configuration mistakes in pre-prod.",
-    "yield": "Turned networking into infrastructure as code for QA — enabling safe iteration and scale while improving product quality and speed."
+    "situation": "<p class=\"p2\"><span class=\"s2\">A security<b> QA/engineering</b> department needed to stand up, modify, and tear down complex network configurations for global rollout — but manual reconfiguration was slow, error‑prone, and blocked release velocity.</span></p>",
+    "task": "<p class=\"p2\"><span class=\"s2\">Designed and created <b>SWITCHBOARD</b>, a system to dynamically build and rebuild network configurations for test environments—safe, fast, and repeatable.</span></p>",
+    "action": "<ul class=\"ul1\">\n<li class=\"li3\">Standardized offerings including physical connections and configurations</li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Defined<b> topology templates</b> and parameterized configs for routers, switches, and firewalls.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Automated <b>push/rollback</b> to lab devices with snapshot/restore and versioned change sets.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Integrated with scripts to provision <b>ephemeral labs</b> for test suites.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Added <b>traffic generation & capture/analysis</b> for performance and failure‑mode testing.</span></li>\n</ul>",
+    "result": "<ul class=\"ul1\">\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Cut environment setup and change time from days to <b>minutes</b>.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Increased test coverage and repeatability; reduced configuration errors.</span></li>\n<li class=\"li2\"><span class=\"s3\"></span><span class=\"s2\">Enabled rapid experimentation with complex topologies and policies.</span></li>\n</ul>",
+    "return": "<p class=\"p2\"><span class=\"s2\">Faster release cycles with lower lab costs and higher engineer productivity; reduced risk from configuration mistakes in pre‑prod, reducing time to validate configurations by <b>98%</b>, from multiple weeks to hours.</span></p>",
+    "yield": "<p class=\"p2\"><span class=\"s2\">Turned networking into <b>infrastructure as code</b> for QA—enabling safe iteration and scale while improving product quality and speed.</span></p>"
   }
 }

@@ -2,15 +2,25 @@
   "id": "CS04",
   "name": "BEACON",
   "tagline": "ML-driven compromise detection reducing identification time by 97%",
-  "location": ["EU", "Japan", "US"],
-  "industry": ["Security"],
-  "discipline": ["Security", "ML/AI", "Automation"],
+  "location": [
+    "EU",
+    "Japan",
+    "US"
+  ],
+  "industry": [
+    "Security"
+  ],
+  "discipline": [
+    "Security",
+    "ML/AI",
+    "Automation"
+  ],
   "starry": {
-    "situation": "",
-    "task": "",
-    "action": "",
-    "result": "",
-    "return": "",
-    "yield": ""
+    "situation": "A top-tier security firm needed a cleaner, faster way to identify compromised systems across a large distributed environment. Traditional monitoring was reactive, slow, and produced excessive false positives.",
+    "task": "Design BEACON, a machine learning platform capable of detecting compromise in near real-time using network behavior analysis at global scale with minimal analyst overhead.",
+    "action": "<ul>\n<li>Assumed compromised systems alter network footprint in measurable ways</li>\n<li>Analyzed first and second derivatives of network traffic</li>\n<li>Detected predictable malicious behaviors (C2, scanning, probing)</li>\n<li>Built lightweight telemetry agents feeding a real-time detection engine</li>\n<li>Tuned ML models for high precision</li>\n<li>Integrated analytics with SOC workflows and automated response</li>\n</ul>",
+    "result": "<ul>\n<li><strong>97% faster detection</strong></li>\n<li>Identified threats missed by traditional monitoring</li>\n<li>Near real-time detection achieved</li>\n</ul>",
+    "return": "<ul>\n<li><strong>85% reduction</strong> in analyst workload</li>\n<li>Up to <strong>17× reduction</strong> in remediation cost</li>\n<li>Improved SOC efficiency</li>\n</ul>",
+    "yield": "Enabled operationalization of machine learning for real-time security detection at scale, improving automation and cyber resilience."
   }
 }

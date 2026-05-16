@@ -2,15 +2,24 @@
   "id": "CS02",
   "name": "COMPASS",
   "tagline": "Cloud vision, impact, and roadmap. Delivered in weeks, not months.",
-  "location": ["EU"],
-  "industry": ["Monitoring"],
-  "discipline": ["Platform", "Infrastructure", "DevOps", "CI/CD"],
+  "location": [
+    "EU"
+  ],
+  "industry": [
+    "Monitoring"
+  ],
+  "discipline": [
+    "Platform",
+    "Infrastructure",
+    "DevOps",
+    "CI/CD"
+  ],
   "starry": {
-    "situation": "",
-    "task": "",
-    "action": "",
-    "result": "",
-    "return": "",
-    "yield": ""
+    "situation": "A European-based IT monitoring company sought a strategic roadmap for cloud adoption. With trends shifting toward cloud and hybrid deployments, leadership aimed to ensure ongoing client relevance and competitiveness.",
+    "task": "Assess the cloud technology landscape and craft a multi-cloud delivery approach, aligned with the company's operational model and considering both major commercial and leading free cloud offerings.",
+    "action": "We rapidly developed a capability mapping framework, enabling side-by-side comparisons of cloud platforms by key features and strengths. We evaluated three major providers and top-tier open-source alternatives, and outlined how development, testing, and delivery capabilities could evolve through cloud adoption.",
+    "result": "Delivered a comprehensive transition blueprint, empowering management to budget and plan a\n<strong>15–18 month</strong> phased cloud journey with confidence, mitigating risk of transition disruption.",
+    "return": "The framework accelerated decision-making and operational ramp-up. Instead of the typical\n<strong>6–9 month</strong> effort requiring six people, we delivered a comprehensive strategic plan in one month with two people — achieving a\n<strong>78%</strong> operational savings.\n\n<br><br>\n\nThe strategy also enabled a “follow the sun” Dev/QA/Delivery model, improved software delivery velocity by\n<strong>5×</strong>, and reduced installation time by\n<strong>93%</strong>.",
+    "yield": "Beyond cloud strategy, the project catalyzed the company's broader digital transformation. Initially aimed at enhancing client relevance, it ultimately elevated their product offerings, operational efficiency, and market agility."
   }
 }

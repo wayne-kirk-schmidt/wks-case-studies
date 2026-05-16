@@ -2,15 +2,24 @@
   "id": "CS03",
   "name": "NXT RAW",
   "tagline": "¼µs market data platform generating $14M+ in APAC revenue",
-  "location": ["APAC", "Japan"],
-  "industry": ["Financial"],
-  "discipline": ["Infrastructure", "Platform", "ML/AI"],
+  "location": [
+    "APAC",
+    "Japan"
+  ],
+  "industry": [
+    "Financial"
+  ],
+  "discipline": [
+    "Infrastructure",
+    "Platform",
+    "ML/AI"
+  ],
   "starry": {
-    "situation": "",
-    "task": "",
-    "action": "",
-    "result": "",
-    "return": "",
-    "yield": ""
+    "situation": "A global financial institution faced competitive pressure to deliver market data faster for electronic trading. Existing systems had plateaued, creating a barrier to client acquisition and trading performance.",
+    "task": "Design an ultra-low latency market data delivery system, capable of global distribution, exceptional speed, and regulatory compliance. Expand client opportunities by offering a differentiated premium data service.",
+    "action": "Developed and deployed an ultra-low latency delivery platform, achieving under <strong>¼ microsecond</strong> system-to-system transmission. Optimized networking, memory, and hardware layers. Filed and received a patent for the core transmission innovations.",
+    "result": "Launched the fastest market data service in the firm's portfolio. Generated an estimated <strong>$26M annually</strong> through premium client offerings.",
+    "return": "Delivered in under <strong>8 months</strong> with a lean team. Reduced operational costs and became the foundation for future ultra-low latency initiatives.",
+    "yield": "Positioned the firm as a leader in low-latency technology and established groundwork for a broader patent portfolio supporting next-generation financial systems."
   }
 }

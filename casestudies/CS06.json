@@ -2,15 +2,23 @@
   "id": "CS06",
   "name": "ANCHOR",
   "tagline": "Order management platform rebuilt from legacy to 99.99% uptime",
-  "location": ["Japan"],
-  "industry": ["Food and Beverage"],
-  "discipline": ["Infrastructure", "Platform", "Automation"],
+  "location": [
+    "Japan"
+  ],
+  "industry": [
+    "Food and Beverage"
+  ],
+  "discipline": [
+    "Infrastructure",
+    "Platform",
+    "Automation"
+  ],
   "starry": {
-    "situation": "A top-10 global beverage company faced infrastructure risk in Japan due to legacy systems with single points of failure, threatening tens of millions in revenue. The goal was to de-risk operations and enable safe software deployment.",
-    "task": "Remove risk with minimal disruption. Ensure minute-level recovery, modernize hardware, and stay within cost and effort constraints.",
-    "action": "Audited systems and implemented backups. Built a virtualized environment for testing and rapid provisioning. Streamlined installs, added monitoring, and deployed a user-friendly hypervisor and backup suite to support recovery and staging.",
-    "result": "Reliability improved to 99.7%. Builds dropped to 1.5 hours, restores to 5 minutes. Processing sped up 3x. Local teams gained performance and readiness for future cloud migration.",
-    "return": "Protected $4M/year in revenue. Saved 900+ hours annually. Improved client experience and enabled staff to focus on business growth.",
-    "yield": "Enabled strategic flexibility and long-term planning. Virtualization and modernization formed a repeatable model for secure, scalable transformation."
+    "situation": "A top-10 global beverage company faced infrastructure risk in Japan due to legacy systems with <strong>single points of failure</strong>, threatening <strong>tens of millions in revenue</strong>. The goal was to <strong>de-risk operations</strong> and enable safe software deployment.",
+    "task": "Remove risk with <strong>minimal disruption</strong>. Ensure <strong>minute-level recovery</strong>, modernize hardware, and stay within cost and effort constraints.",
+    "action": "Audited systems and implemented backups. Built a <strong>virtualized environment</strong> for testing and rapid provisioning. Streamlined installs, added monitoring, and deployed a user-friendly hypervisor and backup suite to support recovery and staging.",
+    "result": "Reliability improved to <strong>99.7%</strong>. Builds dropped to <strong>1.5 hours</strong>, restores to <strong>5 minutes</strong>. Processing sped up 3×. Local teams gained performance and readiness for future cloud migration.",
+    "return": "Protected <strong>$4M/year in revenue</strong>. Saved <strong>900+ hours annually</strong>. Improved client experience and enabled staff to focus on business growth.",
+    "yield": "Enabled strategic flexibility and long-term planning. Virtualization + modernization formed a repeatable model for <strong>secure, scalable transformation</strong>."
   }
 }

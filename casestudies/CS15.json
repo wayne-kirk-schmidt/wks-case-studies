@@ -2,15 +2,24 @@
   "id": "CS15",
   "name": "MAESTRO",
   "tagline": "ML driven testing orchestration cutting multi day cycles to hours",
-  "location": ["Global"],
-  "industry": ["Financial"],
-  "discipline": ["ML/AI", "Automation", "CI/CD", "Platform"],
+  "location": [
+    "Global"
+  ],
+  "industry": [
+    "Financial"
+  ],
+  "discipline": [
+    "ML/AI",
+    "Automation",
+    "CI/CD",
+    "Platform"
+  ],
   "starry": {
-    "situation": "",
-    "task": "",
-    "action": "",
-    "result": "",
-    "return": "",
-    "yield": ""
+    "situation": "<p>A multinational company was migrating from legacy systems and codebases to distributed systems but\nstruggled to <b>test and evaluate</b> software developments at scale. The order management codebase contained\n<b>~2.3 million lines</b> across <b>~1,750 modules</b>, with <b>~400 batch jobs</b> supporting operations.</p>",
+    "task": "<ul>\n<li><b>Minimize impact</b> on production while executing regression and migration tests.</li>\n<li><b>Reduce effort</b> required for testing across a large, complex codebase and environments.</li>\n<li><b>Lower risk</b> as new code is released and migrated to distributed platforms.</li>\n</ul>",
+    "action": "<p>Designed <b>MAESTRO</b>, a machine‑learning based testing platform that streamlines and automates testing:\nbuilds <b>testing playbooks</b> tailored to the <b>codebase</b>, <b>runtime environments</b>, and <b>historical performance</b>.\nMAESTRO prioritizes scenarios, orchestrates data/setup/teardown, and learns from execution outcomes to\nimprove coverage and efficiency over time.</p>",
+    "result": "<ul>\n<li>Cut testing cycle time from <b>12 days</b> to <b>~3 hours</b>.</li>\n<li>Reduced issues/incidents per release from <b>~17%</b> to <b>~2%</b>.</li>\n<li><b>Increased release frequency</b> to slightly more than <b>3×</b>.</li>\n<li>Lowered MTTR from <b>~6 hours</b> to <b>~10 minutes</b>.</li>\n</ul>",
+    "return": "<p><b>Estimated savings:</b> approximately <b>$2.75 million</b> from effort (opportunity + time) alone.</p>",
+    "yield": "<p>By making testing and evaluation <b>dynamic</b> and <b>adaptive</b>, the company can deliver value‑added services\nwhile maintaining an <b>automated baseline</b> for repeatable validation. QA evolves into a blended model that is both\n<b>business‑ready</b> and <b>QA‑rigorous</b>, improving velocity and confidence across releases.</p>"
   }
 }

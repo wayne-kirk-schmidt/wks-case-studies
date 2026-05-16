@@ -2,15 +2,23 @@
   "id": "CS08",
   "name": "BRAVO",
   "tagline": "Automated manual test cycles at scale from weeks to hours",
-  "location": ["Global"],
-  "industry": ["Security"],
-  "discipline": ["ML/AI", "Automation", "CI/CD"],
+  "location": [
+    "Global"
+  ],
+  "industry": [
+    "Security"
+  ],
+  "discipline": [
+    "ML/AI",
+    "Automation",
+    "CI/CD"
+  ],
   "starry": {
-    "situation": "A global endpoint and security management vendor struggled with slow, manual QA cycles. Regression testing across multiple OS and application versions delayed releases and consumed significant engineering effort.",
-    "task": "Design an analytics-driven testing platform to automate result collection, triage, and feedback loops — reducing cycle time while improving reliability.",
-    "action": "Architected BRAVO, a data analytics framework to aggregate test telemetry and automatically classify failures. Integrated with CI/CD to trigger targeted re-runs and prioritize fixes based on impact. Built dashboards for engineering and QA to visualize coverage, flakiness, and pass/fail trends.",
-    "result": "Cut test cycles from days to hours. Improved release predictability and reduced failed deployments.",
-    "return": "Estimated savings of $1.8M annually from reduced effort and faster release velocity.",
-    "yield": "Accelerated delivery without sacrificing quality, demonstrating measurable value of DevOps and analytics in enterprise software pipelines."
+    "situation": "A <strong>global endpoint & security management vendor</strong> struggled with slow, manual QA cycles. Regression testing across multiple OS and application versions delayed releases and consumed significant engineering effort.",
+    "task": "Design an analytics‑driven testing platform to automate result collection, triage, and feedback loops—reducing cycle time while improving reliability.",
+    "action": "<ul><li>Architected <strong>BRAVO</strong>, a data analytics framework to aggregate test telemetry and automatically classify failures.</li><li>Integrated with CI/CD to trigger targeted re‑runs and prioritize fixes based on impact.</li><li>Built dashboards for engineering and QA to visualize coverage, flakiness, and pass/fail trends.</li></ul>",
+    "result": "<ul><li>Cut test cycles from <strong>days to hours</strong>.</li><li>Improved release predictability and reduced failed deployments.</li></ul>",
+    "return": "Estimated savings of <strong>$1.8M</strong> annually from reduced effort and faster release velocity.",
+    "yield": "Accelerated delivery without sacrificing quality, demonstrating measurable value of <strong>DevOps + analytics</strong> in enterprise software pipelines."
   }
 }

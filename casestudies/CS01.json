@@ -2,15 +2,24 @@
   "id": "CS01",
   "name": "PULSE",
   "tagline": "Incident response from 20 minutes to 10 seconds",
-  "location": ["US"],
-  "industry": ["MSP", "MSSP"],
-  "discipline": ["Automation", "Observability", "Platform"],
+  "location": [
+    "US"
+  ],
+  "industry": [
+    "MSP",
+    "MSSP"
+  ],
+  "discipline": [
+    "Automation",
+    "Observability",
+    "Platform"
+  ],
   "starry": {
     "situation": "A North America-based service provider supported 90 clients across finance and commerce. Clients were frustrated — ticket response times averaged over 20 minutes, creating significant dissatisfaction and reputational risk.",
     "task": "The challenge was to reduce response times drastically, implement improvements at scale for all clients, maintain the existing toolset, and work within the constraints of current staffing levels.",
-    "action": "We conducted a structured discovery and designed an event processing pipeline. By analyzing each step — issue recognition, response, and ticket creation — we identified latency gaps. We then instrumented and timestamped all actions, centralized tooling to simplify workflows, automated ticket creation via the pipeline, and implemented duplicate suppression and client notification triggers.",
-    "result": "Response time dropped from 20 minutes to 10 seconds — a 98.3% improvement. The solution scaled across all clients and proved durable under data load.",
-    "return": "The automation resulted in significant operational savings, with an estimated impact of $2.14 million USD annually.",
+    "action": "We conducted a structured discovery and designed an event processing pipeline. By analyzing each step — issue recognition, response, and ticket creation — we identified latency gaps. We then:\n<ul>\n<li>Instrumented and timestamped all actions</li>\n<li>Centralized tooling to simplify workflows</li>\n<li>Automated ticket creation via the pipeline</li>\n<li>Implemented duplicate suppression and client notification triggers</li>\n</ul>",
+    "result": "Response time dropped from\n<span style=\"font-weight:bold;color:black;\">20</span>\nminutes to\n<span style=\"font-weight:bold;color:black;\">10</span>\nseconds — a\n<span style=\"font-weight:bold;color:black;\">98.3%</span>\nimprovement. The solution scaled across all clients and proved durable under data load.",
+    "return": "The automation resulted in significant operational savings, with an estimated impact of\n<span style=\"font-weight:bold;color:black;\">$2.14</span>\nmillion USD annually.",
     "yield": "By dramatically lowering time-to-response without adding staff, the company shifted from reactive operations to growth mode — able to onboard new clients without increasing cost, and reinvest saved time into strategic growth."
   }
 }

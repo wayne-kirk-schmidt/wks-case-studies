@@ -2,15 +2,23 @@
   "id": "CS14",
   "name": "TRACE",
   "tagline": "AI agent assisted post mortem process reducing time from weeks to hours",
-  "location": ["Regional"],
-  "industry": ["Financial"],
-  "discipline": ["AI Agent", "Automation", "Platform"],
+  "location": [
+    "Regional"
+  ],
+  "industry": [
+    "Financial"
+  ],
+  "discipline": [
+    "AI Agent",
+    "Automation",
+    "Platform"
+  ],
   "starry": {
-    "situation": "",
-    "task": "",
-    "action": "",
-    "result": "",
-    "return": "",
-    "yield": ""
+    "situation": "<p>A regional bank struggled to document RCA/Problem Management (PM) reports —\ncoordination, data collection, and authoring were fragmented and repetitive.\nOn average, each RCA/PM report consumed <b>~40 people‑hours</b> across multiple sessions and contributors.</p>",
+    "task": "<ul>\n<li>Reduce barriers to adoption by eliminating friction in <b>data collection</b>.</li>\n<li>Shorten the <b>time‑intensive</b> RCA/PM review cycle.</li>\n<li>Simplify <b>multi‑team coordination</b> so documentation is consistent and complete.</li>\n</ul>",
+    "action": "<ul>\n<li>Mapped and formalized the end‑to‑end <b>RCA/PM process flow</b>.</li>\n<li>Built standardized <b>templates</b> and intake forms to normalize evidence and findings.</li>\n<li>Developed a <b>generative AI agent</b> to:\n    <ul>\n<li><b>Grade</b> reports against best‑practice rubrics,</li>\n<li><b>Create/draft</b> new reports from structured inputs, and</li>\n<li><b>Coach</b> teams on RCA/PM principles and procedures.</li>\n</ul>\n</li>\n</ul>",
+    "result": "<p>Delivered a <b>packaged, structured deployment</b> of the RCA/PM Agent, including:\nknowledge corpus, operating instructions, guidelines, procedures, documentation, and configuration steps —\na complete, repeatable deployment kit.</p>",
+    "return": "<p>Reduced effort per RCA/PM from <b>~40 people‑hours</b> to <b>~3 people‑hours</b> — a\n<b>92.5% improvement</b>. The program’s goal continues to be <b>fewer people</b> and <b>less time</b> required per report.</p>",
+    "yield": "<p><b>Why it matters: time.</b> By identifying high time‑intensive tasks and using automation + AI agents to streamline them,\nteams practice <b>PIM (“Person in the Middle”)</b> programming — extending human reach rather than replacing it.\nAcross candidate workflows, agents target <b>30–45% effort reduction</b>, freeing time to reinvest in enterprise improvements.</p>"
   }
 }
